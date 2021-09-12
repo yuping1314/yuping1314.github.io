@@ -1,0 +1,225 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+<div id="details">
+	
+	<article id="details-post">
+		<div id=details-post-item>
+			<h1></h1>
+			<h2 id="第26课：用Python操作Word和PowerPoint"><a href="#第26课：用Python操作Word和PowerPoint" class="headerlink" title="第26课：用Python操作Word和PowerPoint"></a>第26课：用Python操作Word和PowerPoint</h2><p>在日常工作中，有很多简单重复的劳动其实完全可以交给Python程序，比如根据样板文件（模板文件）批量的生成很多个Word文件或PowerPoint文件。Word是微软公司开发的文字处理程序，相信大家都不陌生，日常办公中很多正式的文档都是用Word进行撰写和编辑的，目前使用的Word文件后缀名一般为<code>.docx</code>。PowerPoint是微软公司开发的演示文稿程序，是微软的Office系列软件中的一员，被商业人士、教师、学生等群体广泛使用，通常也将其称之为“幻灯片”。在Python中，可以使用名为<code>python-docx</code> 的三方库来操作Word，可以使用名为<code>python-pptx</code>的三方库来生成PowerPoint。</p>
+<h3 id="操作Word文档"><a href="#操作Word文档" class="headerlink" title="操作Word文档"></a>操作Word文档</h3><p>我们可以先通过下面的命令来安装<code>python-docx</code>三方库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-docx</span><br></pre></td></tr></table></figure>
+
+<p>按照<a target="_blank" rel="noopener" href="https://python-docx.readthedocs.io/en/latest/">官方文档</a>的介绍，我们可以使用如下所示的代码来生成一个简单的Word文档。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.shared <span class="keyword">import</span> Cm, Pt</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> docx.document <span class="keyword">import</span> Document <span class="keyword">as</span> Doc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建代表Word文档的Doc对象</span></span><br><span class="line">document = Document()  <span class="comment"># type: Doc</span></span><br><span class="line"><span class="comment"># 添加大标题</span></span><br><span class="line">document.add_heading(<span class="string">&#x27;快快乐乐学Python&#x27;</span>, <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 添加段落</span></span><br><span class="line">p = document.add_paragraph(<span class="string">&#x27;Python是一门非常流行的编程语言，它&#x27;</span>)</span><br><span class="line">run = p.add_run(<span class="string">&#x27;简单&#x27;</span>)</span><br><span class="line">run.bold = <span class="literal">True</span></span><br><span class="line">run.font.size = Pt(<span class="number">18</span>)</span><br><span class="line">p.add_run(<span class="string">&#x27;而且&#x27;</span>)</span><br><span class="line">run = p.add_run(<span class="string">&#x27;优雅&#x27;</span>)</span><br><span class="line">run.font.size = Pt(<span class="number">18</span>)</span><br><span class="line">run.underline = <span class="literal">True</span></span><br><span class="line">p.add_run(<span class="string">&#x27;。&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加一级标题</span></span><br><span class="line">document.add_heading(<span class="string">&#x27;Heading, level 1&#x27;</span>, level=<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 添加带样式的段落</span></span><br><span class="line">document.add_paragraph(<span class="string">&#x27;Intense quote&#x27;</span>, style=<span class="string">&#x27;Intense Quote&#x27;</span>)</span><br><span class="line"><span class="comment"># 添加无序列表</span></span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;first item in unordered list&#x27;</span>, style=<span class="string">&#x27;List Bullet&#x27;</span></span><br><span class="line">)</span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;second item in ordered list&#x27;</span>, style=<span class="string">&#x27;List Bullet&#x27;</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 添加有序列表</span></span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;first item in ordered list&#x27;</span>, style=<span class="string">&#x27;List Number&#x27;</span></span><br><span class="line">)</span><br><span class="line">document.add_paragraph(</span><br><span class="line">    <span class="string">&#x27;second item in ordered list&#x27;</span>, style=<span class="string">&#x27;List Number&#x27;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加图片（注意路径和图片必须要存在）</span></span><br><span class="line">document.add_picture(<span class="string">&#x27;resources/guido.jpg&#x27;</span>, width=Cm(<span class="number">5.2</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加分节符</span></span><br><span class="line">document.add_section()</span><br><span class="line"></span><br><span class="line">records = (</span><br><span class="line">    (<span class="string">&#x27;骆昊&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;1995-5-5&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;孙美丽&#x27;</span>, <span class="string">&#x27;女&#x27;</span>, <span class="string">&#x27;1992-2-2&#x27;</span>)</span><br><span class="line">)</span><br><span class="line"><span class="comment"># 添加表格</span></span><br><span class="line">table = document.add_table(rows=<span class="number">1</span>, cols=<span class="number">3</span>)</span><br><span class="line">table.style = <span class="string">&#x27;Dark List&#x27;</span></span><br><span class="line">hdr_cells = table.rows[<span class="number">0</span>].cells</span><br><span class="line">hdr_cells[<span class="number">0</span>].text = <span class="string">&#x27;姓名&#x27;</span></span><br><span class="line">hdr_cells[<span class="number">1</span>].text = <span class="string">&#x27;性别&#x27;</span></span><br><span class="line">hdr_cells[<span class="number">2</span>].text = <span class="string">&#x27;出生日期&#x27;</span></span><br><span class="line"><span class="comment"># 为表格添加行</span></span><br><span class="line"><span class="keyword">for</span> name, sex, birthday <span class="keyword">in</span> records:</span><br><span class="line">    row_cells = table.add_row().cells</span><br><span class="line">    row_cells[<span class="number">0</span>].text = name</span><br><span class="line">    row_cells[<span class="number">1</span>].text = sex</span><br><span class="line">    row_cells[<span class="number">2</span>].text = birthday</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加分页符</span></span><br><span class="line">document.add_page_break()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存文档</span></span><br><span class="line">document.save(<span class="string">&#x27;demo.docx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：上面代码第7行中的注释<code># type: Doc</code>是为了在PyCharm中获得代码补全提示，因为如果不清楚对象具体的数据类型，PyCharm无法在后续代码中给出<code>Doc</code>对象的代码补全提示。</p>
+</blockquote>
+<p>执行上面的代码，打开生成的Word文档，效果如下图所示。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210820002742.png" alt="image-20210820002742341" width="40%">&nbsp;&nbsp;<img src="https://gitee.com/jackfrued/mypic/raw/master/20210820002843.png" alt="image-20210820002843696" width="40%"></p>
+<p>对于一个已经存在的Word文件，我们可以通过下面的代码去遍历它所有的段落并获取对应的内容。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.document <span class="keyword">import</span> Document <span class="keyword">as</span> Doc</span><br><span class="line"></span><br><span class="line">doc = Document(<span class="string">&#x27;resources/离职证明.docx&#x27;</span>)  <span class="comment"># type: Doc</span></span><br><span class="line"><span class="keyword">for</span> no, p <span class="keyword">in</span> <span class="built_in">enumerate</span>(doc.paragraphs):</span><br><span class="line">    <span class="built_in">print</span>(no, p.text)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：如果需要上面代码中的Word文件，可以通过下面的百度云盘地址进行获取。链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g">https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g</a> 提取码:e7b4。</p>
+</blockquote>
+<p>读取到的内容如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">0 </span><br><span class="line">1 离 职 证 明</span><br><span class="line">2 </span><br><span class="line">3 兹证明 王大锤 ，身份证号码： 100200199512120001 ，于 2018 年 8 月 7 日至 2020 年 6 月 28 日在我单位  开发部 部门担任 Java开发工程师 职务，在职期间无不良表现。因 个人 原因，于 2020 年 6 月 28 日起终止解除劳动合同。现已结清财务相关费用，办理完解除劳动关系相关手续，双方不存在任何劳动争议。</span><br><span class="line">4 </span><br><span class="line">5 特此证明！</span><br><span class="line">6 </span><br><span class="line">7 </span><br><span class="line">8 公司名称（盖章）:成都风车车科技有限公司</span><br><span class="line">9    			2020 年 6 月 28 日</span><br></pre></td></tr></table></figure>
+
+<p>讲到这里，相信很多读者已经想到了，我们可以把上面的离职证明制作成一个模板文件，把姓名、身份证号、入职和离职日期等信息用占位符代替，这样通过对占位符的替换，就可以根据实际需要写入对应的信息，这样就可以批量的生成Word文档。</p>
+<p>按照上面的思路，我们首先编辑一个离职证明的模板文件，如下图所示。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210820004223.png" alt="image-20210820004223731" width="75%" style="border:1px solid black"/>
+
+<p>接下来我们读取该文件，将占位符替换为真实信息，就可以生成一个新的Word文档，如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> docx <span class="keyword">import</span> Document</span><br><span class="line"><span class="keyword">from</span> docx.document <span class="keyword">import</span> Document <span class="keyword">as</span> Doc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将真实信息用字典的方式保存在列表中</span></span><br><span class="line">employees = [</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;骆昊&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;100200198011280001&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;sdate&#x27;</span>: <span class="string">&#x27;2008年3月1日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;edate&#x27;</span>: <span class="string">&#x27;2012年2月29日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;department&#x27;</span>: <span class="string">&#x27;产品研发&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;架构师&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;company&#x27;</span>: <span class="string">&#x27;成都华为技术有限公司&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;王大锤&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;510210199012125566&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;sdate&#x27;</span>: <span class="string">&#x27;2019年1月1日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;edate&#x27;</span>: <span class="string">&#x27;2021年4月30日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;department&#x27;</span>: <span class="string">&#x27;产品研发&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;Python开发工程师&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;company&#x27;</span>: <span class="string">&#x27;成都谷道科技有限公司&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;李元芳&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;id&#x27;</span>: <span class="string">&#x27;2102101995103221599&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;sdate&#x27;</span>: <span class="string">&#x27;2020年5月10日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;edate&#x27;</span>: <span class="string">&#x27;2021年3月5日&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;department&#x27;</span>: <span class="string">&#x27;产品研发&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;position&#x27;</span>: <span class="string">&#x27;Java开发工程师&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;company&#x27;</span>: <span class="string">&#x27;同城企业管理集团有限公司&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br><span class="line"><span class="comment"># 对列表进行循环遍历，批量生成Word文档 </span></span><br><span class="line"><span class="keyword">for</span> emp_dict <span class="keyword">in</span> employees:</span><br><span class="line">    <span class="comment"># 读取离职证明模板文件</span></span><br><span class="line">    doc = Document(<span class="string">&#x27;resources/离职证明模板.docx&#x27;</span>)  <span class="comment"># type: Doc</span></span><br><span class="line">    <span class="comment"># 循环遍历所有段落寻找占位符</span></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> doc.paragraphs:</span><br><span class="line">        <span class="keyword">if</span> <span class="string">&#x27;&#123;&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> p.text:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="comment"># 不能直接修改段落内容，否则会丢失样式</span></span><br><span class="line">        <span class="comment"># 所以需要对段落中的元素进行遍历并进行查找替换</span></span><br><span class="line">        <span class="keyword">for</span> run <span class="keyword">in</span> p.runs:</span><br><span class="line">            <span class="keyword">if</span> <span class="string">&#x27;&#123;&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> run.text:</span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line">            <span class="comment"># 将占位符换成实际内容</span></span><br><span class="line">            start, end = run.text.find(<span class="string">&#x27;&#123;&#x27;</span>), run.text.find(<span class="string">&#x27;&#125;&#x27;</span>)</span><br><span class="line">            key, place_holder = run.text[start + <span class="number">1</span>:end], run.text[start:end + <span class="number">1</span>]</span><br><span class="line">            run.text = run.text.replace(place_holder, emp_dict[key])</span><br><span class="line">    <span class="comment"># 每个人对应保存一个Word文档</span></span><br><span class="line">    doc.save(<span class="string">f&#x27;<span class="subst">&#123;emp_dict[<span class="string">&quot;name&quot;</span>]&#125;</span>离职证明.docx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>执行上面的代码，会在当前路径下生成三个Word文档，如下图所示。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210820004825.png" alt="image-20210820004825183" width="50%">
+
+<h3 id="生成PowerPoint"><a href="#生成PowerPoint" class="headerlink" title="生成PowerPoint"></a>生成PowerPoint</h3><p>首先我们需要安装名为<code>python-pptx</code>的三方库，命令如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install python-pptx</span><br></pre></td></tr></table></figure>
+
+<p>用Python操作PowerPoint的内容，因为实际应用场景不算很多，我不打算在这里进行赘述，有兴趣的读者可以自行阅读<code>python-pptx</code>的<a target="_blank" rel="noopener" href="https://python-pptx.readthedocs.io/en/latest/">官方文档</a>，下面仅展示一段来自于官方文档的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pptx <span class="keyword">import</span> Presentation</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建幻灯片对象</span></span><br><span class="line">pres = Presentation()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择母版添加一页</span></span><br><span class="line">title_slide_layout = pres.slide_layouts[<span class="number">0</span>]</span><br><span class="line">slide = pres.slides.add_slide(title_slide_layout)</span><br><span class="line"><span class="comment"># 获取标题栏和副标题栏</span></span><br><span class="line">title = slide.shapes.title</span><br><span class="line">subtitle = slide.placeholders[<span class="number">1</span>]</span><br><span class="line"><span class="comment"># 编辑标题和副标题</span></span><br><span class="line">title.text = <span class="string">&quot;Welcome to Python&quot;</span></span><br><span class="line">subtitle.text = <span class="string">&quot;Life is short, I use Python&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择母版添加一页</span></span><br><span class="line">bullet_slide_layout = pres.slide_layouts[<span class="number">1</span>]</span><br><span class="line">slide = pres.slides.add_slide(bullet_slide_layout)</span><br><span class="line"><span class="comment"># 获取页面上所有形状</span></span><br><span class="line">shapes = slide.shapes</span><br><span class="line"><span class="comment"># 获取标题和主体</span></span><br><span class="line">title_shape = shapes.title</span><br><span class="line">body_shape = shapes.placeholders[<span class="number">1</span>]</span><br><span class="line"><span class="comment"># 编辑标题</span></span><br><span class="line">title_shape.text = <span class="string">&#x27;Introduction&#x27;</span></span><br><span class="line"><span class="comment"># 编辑主体内容</span></span><br><span class="line">tf = body_shape.text_frame</span><br><span class="line">tf.text = <span class="string">&#x27;History of Python&#x27;</span></span><br><span class="line"><span class="comment"># 添加一个一级段落</span></span><br><span class="line">p = tf.add_paragraph()</span><br><span class="line">p.text = <span class="string">&#x27;X\&#x27;max 1989&#x27;</span></span><br><span class="line">p.level = <span class="number">1</span></span><br><span class="line"><span class="comment"># 添加一个二级段落</span></span><br><span class="line">p = tf.add_paragraph()</span><br><span class="line">p.text = <span class="string">&#x27;Guido began to write interpreter for Python.&#x27;</span></span><br><span class="line">p.level = <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存幻灯片</span></span><br><span class="line">pres.save(<span class="string">&#x27;test.pptx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行上面的代码，生成的PowerPoint文件如下图所示。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210820010306.png" alt="image-20210820010306008" width="75%" />
+
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>用Python程序解决办公自动化的问题真的非常酷，它可以将我们从繁琐乏味的劳动中解放出来。写这类代码就是去做一件一劳永逸的事情，写代码的过程即便不怎么愉快，使用这些代码的时候应该是非常开心的。</p>
+
+		</div>
+
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjIyNC8yMjczNQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+		
+	</article>
+
+	<div id="toc">
+		
+	</div>
+
+</div>
+
+<!-- <div id="paginator"> -->
+<!-- 	 -->
+<!-- </div> -->
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+<div id="details">
+	
+	<article id="details-post">
+		<div id=details-post-item>
+			<h1></h1>
+			<h2 id="第25课：用Python读写Excel文件-2"><a href="#第25课：用Python读写Excel文件-2" class="headerlink" title="第25课：用Python读写Excel文件-2"></a>第25课：用Python读写Excel文件-2</h2><h3 id="Excel简介"><a href="#Excel简介" class="headerlink" title="Excel简介"></a>Excel简介</h3><p>Excel是Microsoft（微软）为使用Windows和macOS操作系统开发的一款电子表格软件。Excel凭借其直观的界面、出色的计算功能和图表工具，再加上成功的市场营销，一直以来都是最为流行的个人计算机数据处理软件。当然，Excel也有很多竞品，例如Google Sheets、LibreOffice Calc、Numbers等，这些竞品基本上也能够兼容Excel，至少能够读写较新版本的Excel文件，当然这些不是我们讨论的重点。掌握用Python程序操作Excel文件，可以让日常办公自动化的工作更加轻松愉快，而且在很多商业项目中，导入导出Excel文件都是特别常见的功能。</p>
+<p>本章我们继续讲解基于另一个三方库<code>openpyxl</code>如何进行Excel文件操作，首先需要先安装它。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+
+<p><code>openpyxl</code>的优点在于，当我们打开一个Excel文件后，既可以对它进行读操作，又可以对它进行写操作，而且在操作的便捷性上是优于<code>xlwt</code>和<code>xlrd</code>的。此外，如果要进行样式编辑和公式计算，使用<code>openpyxl</code>也远比上一个章节我们讲解的方式更为简单，而且<code>openpyxl</code>还支持数据透视和插入图表等操作，功能非常强大。有一点需要再次强调，<code>openpyxl</code>并不支持操作Office 2007以前版本的Excel文件。</p>
+<h3 id="读取Excel文件"><a href="#读取Excel文件" class="headerlink" title="读取Excel文件"></a>读取Excel文件</h3><p>例如在当前文件夹下有一个名为“阿里巴巴2020年股票数据.xlsx”的Excel文件，如果想读取并显示该文件的内容，可以通过如下所示的代码来完成。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载一个工作簿 ---&gt; Workbook</span></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;阿里巴巴2020年股票数据.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># 获取工作表的名字</span></span><br><span class="line"><span class="built_in">print</span>(wb.sheetnames)</span><br><span class="line"><span class="comment"># 获取工作表 ---&gt; Worksheet</span></span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line"><span class="comment"># 获得单元格的范围</span></span><br><span class="line"><span class="built_in">print</span>(sheet.dimensions)</span><br><span class="line"><span class="comment"># 获得行数和列数</span></span><br><span class="line"><span class="built_in">print</span>(sheet.max_row, sheet.max_column)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取指定单元格的值</span></span><br><span class="line"><span class="built_in">print</span>(sheet.cell(<span class="number">3</span>, <span class="number">3</span>).value)</span><br><span class="line"><span class="built_in">print</span>(sheet[<span class="string">&#x27;C3&#x27;</span>].value)</span><br><span class="line"><span class="built_in">print</span>(sheet[<span class="string">&#x27;G255&#x27;</span>].value)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取多个单元格（嵌套元组）</span></span><br><span class="line"><span class="built_in">print</span>(sheet[<span class="string">&#x27;A2:C5&#x27;</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取所有单元格的数据</span></span><br><span class="line"><span class="keyword">for</span> row_ch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, sheet.max_row + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> col_ch <span class="keyword">in</span> <span class="string">&#x27;ABCDEFG&#x27;</span>:</span><br><span class="line">        value = sheet[<span class="string">f&#x27;<span class="subst">&#123;col_ch&#125;</span><span class="subst">&#123;row_ch&#125;</span>&#x27;</span>].value</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) == datetime.datetime:</span><br><span class="line">            <span class="built_in">print</span>(value.strftime(<span class="string">&#x27;%Y年%m月%d日&#x27;</span>), end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">type</span>(value) == <span class="built_in">int</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value:&lt;10d&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">type</span>(value) == <span class="built_in">float</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;value:<span class="number">.4</span>f&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(value, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：上面代码中使用的Excel文件“阿里巴巴2020年股票数据.xlsx”可以通过后面的百度云盘地址进行获取。链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g">https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g</a> 提取码:e7b4。</p>
+</blockquote>
+<p>需要提醒大家一点，<code>openpyxl</code>获取指定的单元格有两种方式，一种是通过<code>cell</code>方法，需要注意，该方法的行索引和列索引都是从<code>1</code>开始的，这是为了照顾用惯了Excel的人的习惯；另一种是通过索引运算，通过指定单元格的坐标，例如<code>C3</code>、<code>G255</code>，也可以取得对应的单元格，再通过单元格对象的<code>value</code>属性，就可以获取到单元格的值。通过上面的代码，相信大家还注意到了，可以通过类似<code>sheet[&#39;A2:C5&#39;]</code>或<code>sheet[&#39;A2&#39;:&#39;C5&#39;]</code>这样的切片操作获取多个单元格，该操作将返回嵌套的元组，相当于获取到了多行多列。</p>
+<h3 id="写Excel文件"><a href="#写Excel文件" class="headerlink" title="写Excel文件"></a>写Excel文件</h3><p>下面我们使用<code>openpyxl</code>来进行写Excel操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一步：创建工作簿（Workbook）</span></span><br><span class="line">wb = openpyxl.Workbook()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第二步：添加工作表（Worksheet）</span></span><br><span class="line">sheet = wb.active</span><br><span class="line">sheet.title = <span class="string">&#x27;期末成绩&#x27;</span></span><br><span class="line"></span><br><span class="line">titles = (<span class="string">&#x27;姓名&#x27;</span>, <span class="string">&#x27;语文&#x27;</span>, <span class="string">&#x27;数学&#x27;</span>, <span class="string">&#x27;英语&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> col_index, title <span class="keyword">in</span> <span class="built_in">enumerate</span>(titles):</span><br><span class="line">    sheet.cell(<span class="number">1</span>, col_index + <span class="number">1</span>, title)</span><br><span class="line"></span><br><span class="line">names = (<span class="string">&#x27;关羽&#x27;</span>, <span class="string">&#x27;张飞&#x27;</span>, <span class="string">&#x27;赵云&#x27;</span>, <span class="string">&#x27;马超&#x27;</span>, <span class="string">&#x27;黄忠&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> row_index, name <span class="keyword">in</span> <span class="built_in">enumerate</span>(names):</span><br><span class="line">    sheet.cell(row_index + <span class="number">2</span>, <span class="number">1</span>, name)</span><br><span class="line">    <span class="keyword">for</span> col_index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">5</span>):</span><br><span class="line">        sheet.cell(row_index + <span class="number">2</span>, col_index, random.randrange(<span class="number">50</span>, <span class="number">101</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 第四步：保存工作簿</span></span><br><span class="line">wb.save(<span class="string">&#x27;考试成绩表.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="调整样式和公式计算"><a href="#调整样式和公式计算" class="headerlink" title="调整样式和公式计算"></a>调整样式和公式计算</h4><p>在使用<code>openpyxl</code>操作Excel时，如果要调整单元格的样式，可以直接通过单元格对象（<code>Cell</code>对象）的属性进行操作。单元格对象的属性包括字体（<code>font</code>）、对齐（<code>alignment</code>）、边框（<code>border</code>）等，具体的可以参考<code>openpyxl</code>的<a target="_blank" rel="noopener" href="https://openpyxl.readthedocs.io/en/stable/index.html">官方文档</a>。在使用<code>openpyxl</code>时，如果需要做公式计算，可以完全按照Excel中的操作方式来进行，具体的代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"><span class="keyword">from</span> openpyxl.styles <span class="keyword">import</span> Font, Alignment, Border, Side</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对齐方式</span></span><br><span class="line">alignment = Alignment(horizontal=<span class="string">&#x27;center&#x27;</span>, vertical=<span class="string">&#x27;center&#x27;</span>)</span><br><span class="line"><span class="comment"># 边框线条</span></span><br><span class="line">side = Side(color=<span class="string">&#x27;ff7f50&#x27;</span>, style=<span class="string">&#x27;mediumDashed&#x27;</span>)</span><br><span class="line"></span><br><span class="line">wb = openpyxl.load_workbook(<span class="string">&#x27;考试成绩表.xlsx&#x27;</span>)</span><br><span class="line">sheet = wb.worksheets[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调整行高和列宽</span></span><br><span class="line">sheet.row_dimensions[<span class="number">1</span>].height = <span class="number">30</span></span><br><span class="line">sheet.column_dimensions[<span class="string">&#x27;E&#x27;</span>].width = <span class="number">120</span></span><br><span class="line"></span><br><span class="line">sheet[<span class="string">&#x27;E1&#x27;</span>] = <span class="string">&#x27;平均分&#x27;</span></span><br><span class="line"><span class="comment"># 设置字体</span></span><br><span class="line">sheet.cell(<span class="number">1</span>, <span class="number">5</span>).font = Font(size=<span class="number">18</span>, bold=<span class="literal">True</span>, color=<span class="string">&#x27;ff1493&#x27;</span>, name=<span class="string">&#x27;华文楷体&#x27;</span>)</span><br><span class="line"><span class="comment"># 设置对齐方式</span></span><br><span class="line">sheet.cell(<span class="number">1</span>, <span class="number">5</span>).alignment = alignment</span><br><span class="line"><span class="comment"># 设置单元格边框</span></span><br><span class="line">sheet.cell(<span class="number">1</span>, <span class="number">5</span>).border = Border(left=side, top=side, right=side, bottom=side)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">7</span>):</span><br><span class="line">    <span class="comment"># 公式计算每个学生的平均分</span></span><br><span class="line">    sheet[<span class="string">f&#x27;E<span class="subst">&#123;i&#125;</span>&#x27;</span>] = <span class="string">f&#x27;=average(B<span class="subst">&#123;i&#125;</span>:D<span class="subst">&#123;i&#125;</span>)&#x27;</span></span><br><span class="line">    sheet.cell(i, <span class="number">5</span>).font = Font(size=<span class="number">12</span>, color=<span class="string">&#x27;4169e1&#x27;</span>, italic=<span class="literal">True</span>)</span><br><span class="line">    sheet.cell(i, <span class="number">5</span>).alignment = alignment</span><br><span class="line"></span><br><span class="line">wb.save(<span class="string">&#x27;考试成绩表.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="生成统计图表"><a href="#生成统计图表" class="headerlink" title="生成统计图表"></a>生成统计图表</h3><p>通过<code>openpyxl</code>库，可以直接向Excel中插入统计图表，具体的做法跟在Excel中插入图表大体一致。我们可以创建指定类型的图表对象，然后通过该对象的属性对图表进行设置。当然，最为重要的是为图表绑定数据，即横轴代表什么，纵轴代表什么，具体的数值是多少。最后，可以将图表对象添加到表单中，具体的代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> Workbook</span><br><span class="line"><span class="keyword">from</span> openpyxl.chart <span class="keyword">import</span> BarChart, Reference</span><br><span class="line"></span><br><span class="line">wb = Workbook(write_only=<span class="literal">True</span>)</span><br><span class="line">sheet = wb.create_sheet()</span><br><span class="line"></span><br><span class="line">rows = [</span><br><span class="line">    (<span class="string">&#x27;类别&#x27;</span>, <span class="string">&#x27;销售A组&#x27;</span>, <span class="string">&#x27;销售B组&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;手机&#x27;</span>, <span class="number">40</span>, <span class="number">30</span>),</span><br><span class="line">    (<span class="string">&#x27;平板&#x27;</span>, <span class="number">50</span>, <span class="number">60</span>),</span><br><span class="line">    (<span class="string">&#x27;笔记本&#x27;</span>, <span class="number">80</span>, <span class="number">70</span>),</span><br><span class="line">    (<span class="string">&#x27;外围设备&#x27;</span>, <span class="number">20</span>, <span class="number">10</span>),</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向表单中添加行</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> rows:</span><br><span class="line">    sheet.append(row)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建图表对象</span></span><br><span class="line">chart = BarChart()</span><br><span class="line">chart.<span class="built_in">type</span> = <span class="string">&#x27;col&#x27;</span></span><br><span class="line">chart.style = <span class="number">10</span></span><br><span class="line"><span class="comment"># 设置图表的标题</span></span><br><span class="line">chart.title = <span class="string">&#x27;销售统计图&#x27;</span></span><br><span class="line"><span class="comment"># 设置图表纵轴的标题</span></span><br><span class="line">chart.y_axis.title = <span class="string">&#x27;销量&#x27;</span></span><br><span class="line"><span class="comment"># 设置图表横轴的标题</span></span><br><span class="line">chart.x_axis.title = <span class="string">&#x27;商品类别&#x27;</span></span><br><span class="line"><span class="comment"># 设置数据的范围</span></span><br><span class="line">data = Reference(sheet, min_col=<span class="number">2</span>, min_row=<span class="number">1</span>, max_row=<span class="number">5</span>, max_col=<span class="number">3</span>)</span><br><span class="line"><span class="comment"># 设置分类的范围</span></span><br><span class="line">cats = Reference(sheet, min_col=<span class="number">1</span>, min_row=<span class="number">2</span>, max_row=<span class="number">5</span>)</span><br><span class="line"><span class="comment"># 给图表添加数据</span></span><br><span class="line">chart.add_data(data, titles_from_data=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 给图表设置分类</span></span><br><span class="line">chart.set_categories(cats)</span><br><span class="line">chart.shape = <span class="number">4</span></span><br><span class="line"><span class="comment"># 将图表添加到表单指定的单元格中</span></span><br><span class="line">sheet.add_chart(chart, <span class="string">&#x27;A10&#x27;</span>)</span><br><span class="line"></span><br><span class="line">wb.save(<span class="string">&#x27;demo.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>运行上面的代码，打开生成的Excel文件，效果如下图所示。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210819235009.png" alt="image-20210819235009026" width="75%">
+
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>掌握了Python程序操作Excel的方法，可以解决日常办公中很多繁琐的处理Excel电子表格工作，最常见就是将多个数据格式相同的Excel文件合并到一个文件以及从多个Excel文件或表单中提取指定的数据。如果数据体量较大或者处理数据的方式比较复杂，我们还是推荐大家使用Python数据分析神器之一的<code>pandas</code>库。</p>
+
+		</div>
+
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjIyNC8yMjczNQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+		
+	</article>
+
+	<div id="toc">
+		
+	</div>
+
+</div>
+
+<!-- <div id="paginator"> -->
+<!-- 	 -->
+<!-- </div> -->
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

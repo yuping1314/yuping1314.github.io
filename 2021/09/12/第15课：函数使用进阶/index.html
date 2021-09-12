@@ -1,0 +1,238 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+<div id="details">
+	
+	<article id="details-post">
+		<div id=details-post-item>
+			<h1></h1>
+			<h2 id="第15课：函数使用进阶"><a href="#第15课：函数使用进阶" class="headerlink" title="第15课：函数使用进阶"></a>第15课：函数使用进阶</h2><p>前面我们讲到了关于函数的知识，我们还讲到过Python中常用的数据类型，这些类型的变量都可以作为函数的参数或返回值，用好函数还可以让我们做更多的事情。</p>
+<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>下面是一个判断传入的三条边长能否构成三角形的函数，在调用函数传入参数时，我们可以指定参数名，也可以不指定参数名，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_triangle</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;a = <span class="subst">&#123;a&#125;</span>, b = <span class="subst">&#123;b&#125;</span>, c = <span class="subst">&#123;c&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> a + b &gt; c <span class="keyword">and</span> b + c &gt; a <span class="keyword">and</span> a + c &gt; b</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数传入参数不指定参数名按位置对号入座</span></span><br><span class="line"><span class="built_in">print</span>(is_triangle(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"><span class="comment"># 调用函数通过“参数名=参数值”的形式按顺序传入参数</span></span><br><span class="line"><span class="built_in">print</span>(is_triangle(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>))</span><br><span class="line"><span class="comment"># 调用函数通过“参数名=参数值”的形式不按顺序传入参数</span></span><br><span class="line"><span class="built_in">print</span>(is_triangle(c=<span class="number">3</span>, a=<span class="number">1</span>, b=<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>在没有特殊处理的情况下，函数的参数都是<strong>位置参数</strong>，也就意味着传入参数的时候对号入座即可，如上面代码的第7行所示，传入的参数值<code>1</code>、<code>2</code>、<code>3</code>会依次赋值给参数<code>a</code>、<code>b</code>、<code>c</code>。当然，也可以通过<code>参数名=参数值</code>的方式传入函数所需的参数，因为指定了参数名，传入参数的顺序可以进行调整，如上面代码的第9行和第11行所示。</p>
+<p>调用函数时，如果希望函数的调用者必须以<code>参数名=参数值</code>的方式传参，可以用<strong>命名关键字参数</strong>（keyword-only argument）取代位置参数。所谓命名关键字参数，是在函数的参数列表中，写在<code>*</code>之后的参数，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_triangle</span>(<span class="params">*, a, b, c</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;a = <span class="subst">&#123;a&#125;</span>, b = <span class="subst">&#123;b&#125;</span>, c = <span class="subst">&#123;c&#125;</span>&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> a + b &gt; c <span class="keyword">and</span> b + c &gt; a <span class="keyword">and</span> a + c &gt; b</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># TypeError: is_triangle() takes 0 positional arguments but 3 were given</span></span><br><span class="line"><span class="comment"># print(is_triangle(3, 4, 5))</span></span><br><span class="line"><span class="comment"># 传参时必须使用“参数名=参数值”的方式，位置不重要</span></span><br><span class="line"><span class="built_in">print</span>(is_triangle(a=<span class="number">3</span>, b=<span class="number">4</span>, c=<span class="number">5</span>))</span><br><span class="line"><span class="built_in">print</span>(is_triangle(c=<span class="number">5</span>, b=<span class="number">4</span>, a=<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：上面的<code>is_triangle</code>函数，参数列表中的<code>*</code>是一个分隔符，<code>*</code>前面的参数都是位置参数，而<code>*</code>后面的参数就是命名关键字参数。</p>
+</blockquote>
+<p>我们之前讲过在函数的参数列表中可以使用<strong>可变参数</strong><code>*args</code>来接收任意数量的参数，但是我们需要看看，<code>*args</code>是否能够接收带参数名的参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">*args</span>):</span></span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(arg) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result += arg</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(calc(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p>执行上面的代码会引发<code>TypeError</code>错误，错误消息为<code>calc() got an unexpected keyword argument &#39;a&#39;</code>，由此可见，<code>*args</code>并不能处理带参数名的参数。我们在设计函数时，如果既不知道调用者会传入的参数个数，也不知道调用者会不会指定参数名，那么同时使用可变参数和<strong>关键字参数</strong>。关键字参数会将传入的带参数名的参数组装成一个字典，参数名就是字典中键值对的键，而参数值就是字典中键值对的值，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">*args, **kwargs</span>):</span></span><br><span class="line">    result = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(arg) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result += arg</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> kwargs.values():</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result += value</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(calc())                  <span class="comment"># 0</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>))           <span class="comment"># 6</span></span><br><span class="line"><span class="built_in">print</span>(calc(a=<span class="number">1</span>, b=<span class="number">2</span>, c=<span class="number">3</span>))     <span class="comment"># 6</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, c=<span class="number">3</span>, d=<span class="number">4</span>))    <span class="comment"># 10</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：<strong>不带参数名的参数（位置参数）必须出现在带参数名的参数（关键字参数）之前</strong>，否则将会引发异常。例如，执行<code>calc(1, 2, c=3, d=4, 5)</code>将会引发<code>SyntaxError</code>错误，错误消息为<code>positional argument follows keyword argument</code>，翻译成中文意思是“位置参数出现在关键字参数之后”。</p>
+</blockquote>
+<h3 id="高阶函数的用法"><a href="#高阶函数的用法" class="headerlink" title="高阶函数的用法"></a>高阶函数的用法</h3><p>在前面几节课中，我们讲到了面向对象程序设计，在面向对象的世界中，一切皆为对象，所以类和函数也是对象。函数的参数和返回值可以是任意类型的对象，这就意味着<strong>函数本身也可以作为函数的参数或返回值</strong>，这就是所谓的<strong>高阶函数</strong>。</p>
+<p>如果我们希望上面的<code>calc</code>函数不仅仅可以做多个参数求和，还可以做多个参数求乘积甚至更多的二元运算，我们就可以使用高阶函数的方式来改写上面的代码，将加法运算从函数中移除掉，具体的做法如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">*args, init_value, op, **kwargs</span>):</span></span><br><span class="line">    result = init_value</span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(arg) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result = op(result, arg)</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> kwargs.values():</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result = op(result, value)</span><br><span class="line">    <span class="keyword">return</span> result</span><br></pre></td></tr></table></figure>
+
+<p>注意，上面的函数增加了两个参数，其中<code>init_value</code>代表运算的初始值，<code>op</code>代表二元运算函数。经过改造的<code>calc</code>函数不仅仅可以实现多个参数的累加求和，也可以实现多个参数的累乘运算，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mul</span>(<span class="params">x, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x * y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, init_value=<span class="number">0</span>, op=add, x=<span class="number">4</span>, y=<span class="number">5</span>))      <span class="comment"># 15</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, x=<span class="number">3</span>, y=<span class="number">4</span>, z=<span class="number">5</span>, init_value=<span class="number">1</span>, op=mul))    <span class="comment"># 120</span></span><br></pre></td></tr></table></figure>
+
+<p>通过对高阶函数的运用，<code>calc</code>函数不再和加法运算耦合，所以灵活性和通用性会变强，这是一种解耦合的编程技巧，但是最初学者来说可能会稍微有点难以理解。需要注意的是，将函数作为参数和调用函数是有显著的区别的，<strong>调用函数需要在函数名后面跟上圆括号，而把函数作为参数时只需要函数名即可</strong>。上面的代码也可以不用定义<code>add</code>和<code>mul</code>函数，因为Python标准库中的<code>operator</code>模块提供了代表加法运算的<code>add</code>和代表乘法运算的<code>mul</code>函数，我们直接使用即可，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> operator</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, init_value=<span class="number">0</span>, op=operator.add, x=<span class="number">4</span>, y=<span class="number">5</span>))      <span class="comment"># 15</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, x=<span class="number">3</span>, y=<span class="number">4</span>, z=<span class="number">5</span>, init_value=<span class="number">1</span>, op=operator.mul))    <span class="comment"># 120</span></span><br></pre></td></tr></table></figure>
+
+<p>Python内置函数中有不少高阶函数，我们前面提到过的<code>filter</code>和<code>map</code>函数就是高阶函数，前者可以实现对序列中元素的过滤，后者可以实现对序列中元素的映射，例如我们要去掉一个整数列表中的奇数，并对所有的偶数求平方得到一个新的列表，就可以直接使用这两个函数来做到，具体的做法是如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_even</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="keyword">return</span> num % <span class="number">2</span> == <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">square</span>(<span class="params">num</span>):</span></span><br><span class="line">    <span class="keyword">return</span> num ** <span class="number">2</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">numbers1 = [<span class="number">35</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">99</span>, <span class="number">60</span>, <span class="number">52</span>]</span><br><span class="line">numbers2 = <span class="built_in">list</span>(<span class="built_in">map</span>(square, <span class="built_in">filter</span>(is_even, numbers1)))</span><br><span class="line"><span class="built_in">print</span>(numbers2)    <span class="comment"># [144, 64, 3600, 2704]</span></span><br></pre></td></tr></table></figure>
+
+<p>当然，要完成上面代码的功能，也可以使用列表生成式，列表生成式的做法更为简单优雅。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers1 = [<span class="number">35</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">99</span>, <span class="number">60</span>, <span class="number">52</span>]</span><br><span class="line">numbers2 = [num ** <span class="number">2</span> <span class="keyword">for</span> num <span class="keyword">in</span> numbers1 <span class="keyword">if</span> num % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(numbers2)    <span class="comment"># [144, 64, 3600, 2704]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Lambda函数"><a href="#Lambda函数" class="headerlink" title="Lambda函数"></a>Lambda函数</h3><p>在使用高阶函数的时候，如果作为参数或者返回值的函数本身非常简单，一行代码就能够完成，那么我们可以使用<strong>Lambda函数</strong>来表示。Python中的Lambda函数是没有的名字函数，所以很多人也把它叫做<strong>匿名函数</strong>，匿名函数只能有一行代码，代码中的表达式产生的运算结果就是这个匿名函数的返回值。上面代码中的<code>is_even</code>和<code>square</code>函数都只有一行代码，我们可以用Lambda函数来替换掉它们，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers1 = [<span class="number">35</span>, <span class="number">12</span>, <span class="number">8</span>, <span class="number">99</span>, <span class="number">60</span>, <span class="number">52</span>]</span><br><span class="line">numbers2 = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, <span class="built_in">filter</span>(<span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number">0</span>, numbers1)))</span><br><span class="line"><span class="built_in">print</span>(numbers2)    <span class="comment"># [144, 64, 3600, 2704]</span></span><br></pre></td></tr></table></figure>
+
+<p>通过上面的代码可以看出，定义Lambda函数的关键字是<code>lambda</code>，后面跟函数的参数，如果有多个参数用逗号进行分隔；冒号后面的部分就是函数的执行体，通常是一个表达式，表达式的运算结果就是Lambda函数的返回值，不需要写<code>return</code> 关键字。</p>
+<p>如果需要使用加减乘除这种简单的二元函数，也可以用Lambda函数来书写，例如调用上面的<code>calc</code>函数时，可以通过传入Lambda函数来作为<code>op</code>参数的参数值。当然，<code>op</code>参数也可以有默认值，例如我们可以用一个代表加法运算的Lambda函数来作为<code>op</code>参数的默认值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calc</span>(<span class="params">*args, init_value=<span class="number">0</span>, op=<span class="keyword">lambda</span> x, y: x + y, **kwargs</span>):</span></span><br><span class="line">    result = init_value</span><br><span class="line">    <span class="keyword">for</span> arg <span class="keyword">in</span> args:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(arg) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result = op(result, arg)</span><br><span class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> kwargs.values():</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">type</span>(value) <span class="keyword">in</span> (<span class="built_in">int</span>, <span class="built_in">float</span>):</span><br><span class="line">            result = op(result, value)</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用calc函数，使用init_value和op的默认值</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, x=<span class="number">4</span>, y=<span class="number">5</span>))    <span class="comment"># 15</span></span><br><span class="line"><span class="comment"># 调用calc函数，通过lambda函数给op参数赋值</span></span><br><span class="line"><span class="built_in">print</span>(calc(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, x=<span class="number">4</span>, y=<span class="number">5</span>, init_value=<span class="number">1</span>, op=<span class="keyword">lambda</span> x, y: x * y))    <span class="comment"># 120</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：注意上面的代码中的<code>calc</code>函数，它同时使用了可变参数、关键字参数、命名关键字参数，其中命名关键字参数要放在可变参数和关键字参数之间，传参时先传入可变参数，关键字参数和命名关键字参数的先后顺序并不重要。</p>
+</blockquote>
+<p>有很多函数在Python中用一行代码就能实现，我们可以用Lambda函数来定义这些函数，调用Lambda函数就跟调用普通函数一样，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> operator, functools</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一行代码定义求阶乘的函数</span></span><br><span class="line">fac = <span class="keyword">lambda</span> num: functools.reduce(operator.mul, <span class="built_in">range</span>(<span class="number">1</span>, num + <span class="number">1</span>), <span class="number">1</span>)</span><br><span class="line"><span class="comment"># 一行代码定义判断素数的函数</span></span><br><span class="line">is_prime = <span class="keyword">lambda</span> x: x &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="built_in">all</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> f: x % f, <span class="built_in">range</span>(<span class="number">2</span>, <span class="built_in">int</span>(x ** <span class="number">0.5</span>) + <span class="number">1</span>)))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用Lambda函数</span></span><br><span class="line"><span class="built_in">print</span>(fac(<span class="number">10</span>))        <span class="comment"># 3628800</span></span><br><span class="line"><span class="built_in">print</span>(is_prime(<span class="number">9</span>))    <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示1</strong>：上面使用的<code>reduce</code>函数是Python标准库<code>functools</code>模块中的函数，它可以实现对数据的归约操作，通常情况下，<strong>过滤</strong>（filter）、<strong>映射</strong>（map）和<strong>归约</strong>（reduce）是处理数据中非常关键的三个步骤，而Python的标准库也提供了对这三个操作的支持。</p>
+<p><strong>提示2</strong>：上面使用的<code>all</code>函数是Python内置函数，如果传入的序列中所有布尔值都是<code>True</code>，<code>all</code>函数就返回<code>True</code>，否则<code>all</code>函数就返回<code>False</code>。</p>
+</blockquote>
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>Python中的函数可以使用可变参数<code>*args</code>和关键字参数<code>**kwargs</code>来接收任意数量的参数，而且传入参数时可以带上参数名也可以没有参数名，可变参数会被处理成一个元组，而关键字参数会被处理成一个字典。<strong>Python中的函数是一等函数，可以赋值给变量，也可以作为函数的参数和返回值</strong>，这也就意味着我们可以在Python中使用高阶函数。如果我们要定义的函数非常简单，只有一行代码且不需要函数名，可以使用Lambda函数（匿名函数）。</p>
+
+		</div>
+
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjIyNC8yMjczNQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+		
+	</article>
+
+	<div id="toc">
+		
+	</div>
+
+</div>
+
+<!-- <div id="paginator"> -->
+<!-- 	 -->
+<!-- </div> -->
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+<div id="details">
+	
+	<article id="details-post">
+		<div id=details-post-item>
+			<h1></h1>
+			<h2 id="第28课：用Python处理图像"><a href="#第28课：用Python处理图像" class="headerlink" title="第28课：用Python处理图像"></a>第28课：用Python处理图像</h2><h3 id="入门知识"><a href="#入门知识" class="headerlink" title="入门知识"></a>入门知识</h3><ol>
+<li><p>颜色。如果你有使用颜料画画的经历，那么一定知道混合红、黄、蓝三种颜料可以得到其他的颜色，事实上这三种颜色就是美术中的三原色，它们是不能再分解的基本颜色。在计算机中，我们可以将红、绿、蓝三种色光以不同的比例叠加来组合成其他的颜色，因此这三种颜色就是色光三原色。在计算机系统中，我们通常会将一个颜色表示为一个RGB值或RGBA值（其中的A表示Alpha通道，它决定了透过这个图像的像素，也就是透明度）。</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">RGB值</th>
+<th align="center">名称</th>
+<th align="center">RGB值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">White（白）</td>
+<td align="center">(255, 255, 255)</td>
+<td align="center">Red（红）</td>
+<td align="center">(255, 0, 0)</td>
+</tr>
+<tr>
+<td align="center">Green（绿）</td>
+<td align="center">(0, 255, 0)</td>
+<td align="center">Blue（蓝）</td>
+<td align="center">(0, 0, 255)</td>
+</tr>
+<tr>
+<td align="center">Gray（灰）</td>
+<td align="center">(128, 128, 128)</td>
+<td align="center">Yellow（黄）</td>
+<td align="center">(255, 255, 0)</td>
+</tr>
+<tr>
+<td align="center">Black（黑）</td>
+<td align="center">(0, 0, 0)</td>
+<td align="center">Purple（紫）</td>
+<td align="center">(128, 0, 128)</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>像素。对于一个由数字序列表示的图像来说，最小的单位就是图像上单一颜色的小方格，这些小方块都有一个明确的位置和被分配的色彩数值，而这些一小方格的颜色和位置决定了该图像最终呈现出来的样子，它们是不可分割的单位，我们通常称之为像素（pixel）。每一个图像都包含了一定量的像素，这些像素决定图像在屏幕上所呈现的大小，大家如果爱好拍照或者自拍，对像素这个词就不会陌生。</p>
+</li>
+</ol>
+<h3 id="用Pillow处理图像"><a href="#用Pillow处理图像" class="headerlink" title="用Pillow处理图像"></a>用Pillow处理图像</h3><p>Pillow是由从著名的Python图像处理库PIL发展出来的一个分支，通过Pillow可以实现图像压缩和图像处理等各种操作。可以使用下面的命令来安装Pillow。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pillow</span><br></pre></td></tr></table></figure>
+
+<p>Pillow中最为重要的是<code>Image</code>类，可以通过<code>Image</code>模块的<code>open</code>函数来读取图像并获得<code>Image</code>类型的对象。</p>
+<ol>
+<li><p>读取和显示图像</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取图像获得Image对象</span></span><br><span class="line">image = Image.<span class="built_in">open</span>(<span class="string">&#x27;guido.jpg&#x27;</span>)</span><br><span class="line"><span class="comment"># 通过Image对象的format属性获得图像的格式</span></span><br><span class="line"><span class="built_in">print</span>(image.<span class="built_in">format</span>) <span class="comment"># JPEG</span></span><br><span class="line"><span class="comment"># 通过Image对象的size属性获得图像的尺寸</span></span><br><span class="line"><span class="built_in">print</span>(image.size)   <span class="comment"># (500, 750)</span></span><br><span class="line"><span class="comment"># 通过Image对象的mode属性获取图像的模式</span></span><br><span class="line"><span class="built_in">print</span>(image.mode)   <span class="comment"># RGB</span></span><br><span class="line"><span class="comment"># 通过Image对象的show方法显示图像</span></span><br><span class="line">image.show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202628.png" width="80%"></li>
+<li><p>剪裁图像</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过Image对象的crop方法指定剪裁区域剪裁图像</span></span><br><span class="line">image.crop((<span class="number">80</span>, <span class="number">20</span>, <span class="number">310</span>, <span class="number">360</span>)).show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202701.png" width="80%"></li>
+<li><p>生成缩略图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过Image对象的thumbnail方法生成指定尺寸的缩略图</span></span><br><span class="line">image.thumbnail((<span class="number">128</span>, <span class="number">128</span>))</span><br><span class="line">image.show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202722.png" width="100%"></li>
+<li><p>缩放和黏贴图像</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 读取骆昊的照片获得Image对象</span></span><br><span class="line">luohao_image = Image.<span class="built_in">open</span>(<span class="string">&#x27;luohao.png&#x27;</span>)</span><br><span class="line"><span class="comment"># 读取吉多的照片获得Image对象</span></span><br><span class="line">guido_image = Image.<span class="built_in">open</span>(<span class="string">&#x27;guido.jpg&#x27;</span>)</span><br><span class="line"><span class="comment"># 从吉多的照片上剪裁出吉多的头</span></span><br><span class="line">guido_head = guido_image.crop((<span class="number">80</span>, <span class="number">20</span>, <span class="number">310</span>, <span class="number">360</span>))</span><br><span class="line">width, height = guido_head.size</span><br><span class="line"><span class="comment"># 使用Image对象的resize方法修改图像的尺寸</span></span><br><span class="line"><span class="comment"># 使用Image对象的paste方法将吉多的头粘贴到骆昊的照片上</span></span><br><span class="line">luohao_image.paste(guido_head.resize((<span class="built_in">int</span>(width / <span class="number">1.5</span>), <span class="built_in">int</span>(height / <span class="number">1.5</span>))), (<span class="number">172</span>, <span class="number">40</span>))</span><br><span class="line">luohao_image.show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202749.png" width="80%"></li>
+<li><p>旋转和翻转</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">image = Image.<span class="built_in">open</span>(<span class="string">&#x27;guido.jpg&#x27;</span>)</span><br><span class="line"><span class="comment"># 使用Image对象的rotate方法实现图像的旋转</span></span><br><span class="line">image.rotate(<span class="number">45</span>).show()</span><br><span class="line"><span class="comment"># 使用Image对象的transpose方法实现图像翻转</span></span><br><span class="line"><span class="comment"># Image.FLIP_LEFT_RIGHT - 水平翻转</span></span><br><span class="line"><span class="comment"># Image.FLIP_TOP_BOTTOM - 垂直翻转</span></span><br><span class="line">image.transpose(Image.FLIP_TOP_BOTTOM).show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202829.png" width="80%"></li>
+<li><p>操作像素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">80</span>, <span class="number">310</span>):</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>, <span class="number">360</span>):</span><br><span class="line">        <span class="comment"># 通过Image对象的putpixel方法修改图像指定像素点</span></span><br><span class="line">        image.putpixel((x, y), (<span class="number">128</span>, <span class="number">128</span>, <span class="number">128</span>))</span><br><span class="line">image.show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202932.png" width="80%"></li>
+<li><p>滤镜效果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> ImageFilter</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用Image对象的filter方法对图像进行滤镜处理</span></span><br><span class="line"><span class="comment"># ImageFilter模块包含了诸多预设的滤镜也可以自定义滤镜</span></span><br><span class="line">image.<span class="built_in">filter</span>(ImageFilter.CONTOUR).show()</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803202953.png" width="80%"></li>
+</ol>
+<h3 id="使用Pillow绘图"><a href="#使用Pillow绘图" class="headerlink" title="使用Pillow绘图"></a>使用Pillow绘图</h3><p>Pillow中有一个名为<code>ImageDraw</code>的模块，该模块的<code>Draw</code>函数会返回一个<code>ImageDraw</code>对象，通过<code>ImageDraw</code>对象的<code>arc</code>、<code>line</code>、<code>rectangle</code>、<code>ellipse</code>、<code>polygon</code>等方法，可以在图像上绘制出圆弧、线条、矩形、椭圆、多边形等形状，也可以通过该对象的<code>text</code>方法在图像上添加文字。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210803203016.png" width="80%">
+
+<p>要绘制如上图所示的图像，完整的代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image, ImageDraw, ImageFont</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">random_color</span>():</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;生成随机颜色&quot;&quot;&quot;</span></span><br><span class="line">    red = random.randint(<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">    green = random.randint(<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">    blue = random.randint(<span class="number">0</span>, <span class="number">255</span>)</span><br><span class="line">    <span class="keyword">return</span> red, green, blue</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">width, height = <span class="number">800</span>, <span class="number">600</span></span><br><span class="line"><span class="comment"># 创建一个800*600的图像，背景色为白色</span></span><br><span class="line">image = Image.new(mode=<span class="string">&#x27;RGB&#x27;</span>, size=(width, height), color=(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>))</span><br><span class="line"><span class="comment"># 创建一个ImageDraw对象</span></span><br><span class="line">drawer = ImageDraw.Draw(image)</span><br><span class="line"><span class="comment"># 通过指定字体和大小获得ImageFont对象</span></span><br><span class="line">font = ImageFont.truetype(<span class="string">&#x27;Kongxin.ttf&#x27;</span>, <span class="number">32</span>)</span><br><span class="line"><span class="comment"># 通过ImageDraw对象的text方法绘制文字</span></span><br><span class="line">drawer.text((<span class="number">300</span>, <span class="number">50</span>), <span class="string">&#x27;Hello, world!&#x27;</span>, fill=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), font=font)</span><br><span class="line"><span class="comment"># 通过ImageDraw对象的line方法绘制两条对角直线</span></span><br><span class="line">drawer.line((<span class="number">0</span>, <span class="number">0</span>, width, height), fill=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), width=<span class="number">2</span>)</span><br><span class="line">drawer.line((width, <span class="number">0</span>, <span class="number">0</span>, height), fill=(<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>), width=<span class="number">2</span>)</span><br><span class="line">xy = width // <span class="number">2</span> - <span class="number">60</span>, height // <span class="number">2</span> - <span class="number">60</span>, width // <span class="number">2</span> + <span class="number">60</span>, height // <span class="number">2</span> + <span class="number">60</span></span><br><span class="line"><span class="comment"># 通过ImageDraw对象的rectangle方法绘制矩形</span></span><br><span class="line">drawer.rectangle(xy, outline=(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>), width=<span class="number">2</span>)</span><br><span class="line"><span class="comment"># 通过ImageDraw对象的ellipse方法绘制椭圆</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">4</span>):</span><br><span class="line">    left, top, right, bottom = <span class="number">150</span> + i * <span class="number">120</span>, <span class="number">220</span>, <span class="number">310</span> + i * <span class="number">120</span>, <span class="number">380</span></span><br><span class="line">    drawer.ellipse((left, top, right, bottom), outline=random_color(), width=<span class="number">8</span>)</span><br><span class="line"><span class="comment"># 显示图像</span></span><br><span class="line">image.show()</span><br><span class="line"><span class="comment"># 保存图像</span></span><br><span class="line">image.save(<span class="string">&#x27;result.png&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：上面代码中使用的字体文件需要根据自己准备，可以选择自己喜欢的字体文件并放置在代码目录下。</p>
+</blockquote>
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>使用Python语言做开发，除了可以用Pillow来处理图像外，还可以使用更为强大的OpenCV库来完成图形图像的处理，OpenCV（<strong>Open</strong> Source <strong>C</strong>omputer <strong>V</strong>ision Library）是一个跨平台的计算机视觉库，可以用来开发实时图像处理、计算机视觉和模式识别程序。在我们的日常工作中，有很多繁琐乏味的任务其实都可以通过Python程序来处理，编程的目的就是让计算机帮助我们解决问题，减少重复乏味的劳动。通过本章节的学习，相信大家已经感受到了使用Python程序绘图P图的乐趣，其实Python能做的事情还远不止这些，继续你的学习吧。</p>
+
+		</div>
+
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjIyNC8yMjczNQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+		
+	</article>
+
+	<div id="toc">
+		
+	</div>
+
+</div>
+
+<!-- <div id="paginator"> -->
+<!-- 	 -->
+<!-- </div> -->
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

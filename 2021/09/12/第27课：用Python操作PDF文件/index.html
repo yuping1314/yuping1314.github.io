@@ -1,0 +1,219 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+<div id="details">
+	
+	<article id="details-post">
+		<div id=details-post-item>
+			<h1></h1>
+			<h2 id="第27课：用Python操作PDF文件"><a href="#第27课：用Python操作PDF文件" class="headerlink" title="第27课：用Python操作PDF文件"></a>第27课：用Python操作PDF文件</h2><p>PDF是Portable Document Format的缩写，这类文件通常使用<code>.pdf</code>作为其扩展名。在日常开发工作中，最容易遇到的就是从PDF中读取文本内容以及用已有的内容生成PDF文档这两个任务。</p>
+<h3 id="从PDF中提取文本"><a href="#从PDF中提取文本" class="headerlink" title="从PDF中提取文本"></a>从PDF中提取文本</h3><p>在Python中，可以使用名为<code>PyPDF2</code>的三方库来读取PDF文件，可以使用下面的命令来安装它。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyPDF2</span><br></pre></td></tr></table></figure>
+
+<p><code>PyPDF2</code>没有办法从PDF文档中提取图像、图表或其他媒体，但它可以提取文本，并将其返回为Python字符串。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"></span><br><span class="line">reader = PyPDF2.PdfFileReader(<span class="string">&#x27;test.pdf&#x27;</span>)</span><br><span class="line">page = reader.getPage(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">print</span>(page.extractText())</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：上面代码中使用的PDF文件“test.pdf”以及下面的代码中需要用到的PDF文件，都可以通过后面的百度云盘地址进行获取。链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g">https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g</a> 提取码:e7b4。</p>
+</blockquote>
+<p>当然，<code>PyPDF2</code>并不是什么样的PDF文档都能提取出文字来，这个问题就我所知并没有什么特别好的解决方法，尤其是在提取中文的时候。网上也有很多讲解从PDF中提取文字的文章，推荐大家自行阅读<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1395339">《三大神器助力Python提取pdf文档信息》</a>一文进行了解。</p>
+<p>要从PDF文件中提取文本也可以直接使用三方的命令行工具，具体的做法如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pdfminer.six</span><br><span class="line">pdf2text.py test.pdf</span><br></pre></td></tr></table></figure>
+
+<h3 id="旋转和叠加页面"><a href="#旋转和叠加页面" class="headerlink" title="旋转和叠加页面"></a>旋转和叠加页面</h3><p>上面的代码中通过创建<code>PdfFileReader</code>对象的方式来读取PDF文档，该对象的<code>getPage</code>方法可以获得PDF文档的指定页并得到一个<code>PageObject</code>对象，通过<code>PageObject</code>对象的<code>rotateClockwise</code>和<code>rotateCounterClockwise</code>方法可以实现页面的顺时针和逆时针方向旋转，通过<code>PageObject</code>对象的<code>addBlankPage</code>方法可以添加一个新的空白页，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PyPDF2.pdf <span class="keyword">import</span> PageObject</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个读PDF文件的Reader对象</span></span><br><span class="line">reader = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line"><span class="comment"># 创建一个写PDF文件的Writer对象</span></span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"><span class="comment"># 对PDF文件所有页进行循环遍历</span></span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader.numPages):</span><br><span class="line">    <span class="comment"># 获取指定页码的Page对象</span></span><br><span class="line">    current_page = reader.getPage(page_num)  <span class="comment"># type: PageObject</span></span><br><span class="line">    <span class="keyword">if</span> page_num % <span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">        <span class="comment"># 奇数页顺时针旋转90度</span></span><br><span class="line">        current_page.rotateClockwise(<span class="number">90</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="comment"># 偶数页反时针旋转90度</span></span><br><span class="line">        current_page.rotateCounterClockwise(<span class="number">90</span>)</span><br><span class="line">    writer.addPage(current_page)</span><br><span class="line"><span class="comment"># 最后添加一个空白页并旋转90度</span></span><br><span class="line">page = writer.addBlankPage()  <span class="comment"># type: PageObject</span></span><br><span class="line">page.rotateClockwise(<span class="number">90</span>)</span><br><span class="line"><span class="comment"># 通过Writer对象的write方法将PDF写入文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-modified.pdf&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br></pre></td></tr></table></figure>
+
+<h3 id="加密PDF文件"><a href="#加密PDF文件" class="headerlink" title="加密PDF文件"></a>加密PDF文件</h3><p>使用<code>PyPDF2</code>中的<code>PdfFileWrite</code>对象可以为PDF文档加密，如果需要给一系列的PDF文档设置统一的访问口令，使用Python程序来处理就会非常的方便。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"></span><br><span class="line">reader = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader.numPages):</span><br><span class="line">    writer.addPage(reader.getPage(page_num))</span><br><span class="line"><span class="comment"># 通过encrypt方法加密PDF文件，方法的参数就是设置的密码</span></span><br><span class="line">writer.encrypt(<span class="string">&#x27;foobared&#x27;</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-encrypted.pdf&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br></pre></td></tr></table></figure>
+
+<h3 id="批量添加水印"><a href="#批量添加水印" class="headerlink" title="批量添加水印"></a>批量添加水印</h3><p>上面提到的<code>PageObject</code>对象还有一个名为<code>mergePage</code>的方法，可以两个PDF页面进行叠加，通过这个操作，我们很容易实现给PDF文件添加水印的功能。例如要给上面的“XGBoost.pdf”文件添加一个水印，我们可以先准备好一个提供水印页面的PDF文件，然后将包含水印的<code>PageObject</code>读取出来，然后再循环遍历“XGBoost.pdf”文件的每个页，获取到<code>PageObject</code>对象，然后通过<code>mergePage</code>方法实现水印页和原始页的合并，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> PyPDF2</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PyPDF2.pdf <span class="keyword">import</span> PageObject</span><br><span class="line"></span><br><span class="line">reader1 = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/XGBoost.pdf&#x27;</span>)</span><br><span class="line">reader2 = PyPDF2.PdfFileReader(<span class="string">&#x27;resources/watermark.pdf&#x27;</span>)</span><br><span class="line">writer = PyPDF2.PdfFileWriter()</span><br><span class="line"><span class="comment"># 获取水印页</span></span><br><span class="line">watermark_page = reader2.getPage(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">for</span> page_num <span class="keyword">in</span> <span class="built_in">range</span>(reader1.numPages):</span><br><span class="line">    current_page = reader1.getPage(page_num)  <span class="comment"># type: PageObject</span></span><br><span class="line">    current_page.mergePage(watermark_page)</span><br><span class="line">    <span class="comment"># 将原始页和水印页进行合并</span></span><br><span class="line">    writer.addPage(current_page)</span><br><span class="line"><span class="comment"># 将PDF写入文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;resources/XGBoost-watermarked.pdf&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> file:</span><br><span class="line">    writer.write(file)</span><br></pre></td></tr></table></figure>
+
+<p>如果愿意，还可以让奇数页和偶数页使用不同的水印，大家可以自己思考下应该怎么做。</p>
+<h3 id="创建PDF文件"><a href="#创建PDF文件" class="headerlink" title="创建PDF文件"></a>创建PDF文件</h3><p>创建PDF文档需要三方库<code>reportlab</code>的支持，安装的方法如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install reportlab</span><br></pre></td></tr></table></figure>
+
+<p>下面通过一个例子为大家展示<code>reportlab</code>的用法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> reportlab.lib.pagesizes <span class="keyword">import</span> A4</span><br><span class="line"><span class="keyword">from</span> reportlab.pdfbase <span class="keyword">import</span> pdfmetrics</span><br><span class="line"><span class="keyword">from</span> reportlab.pdfbase.ttfonts <span class="keyword">import</span> TTFont</span><br><span class="line"><span class="keyword">from</span> reportlab.pdfgen <span class="keyword">import</span> canvas</span><br><span class="line"></span><br><span class="line">pdf_canvas = canvas.Canvas(<span class="string">&#x27;resources/demo.pdf&#x27;</span>, pagesize=A4)</span><br><span class="line">width, height = A4</span><br><span class="line"></span><br><span class="line"><span class="comment"># 绘图</span></span><br><span class="line">image = canvas.ImageReader(<span class="string">&#x27;resources/guido.jpg&#x27;</span>)</span><br><span class="line">pdf_canvas.drawImage(image, <span class="number">20</span>, height - <span class="number">395</span>, <span class="number">250</span>, <span class="number">375</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示当前页</span></span><br><span class="line">pdf_canvas.showPage()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注册字体文件</span></span><br><span class="line">pdfmetrics.registerFont(TTFont(<span class="string">&#x27;Font1&#x27;</span>, <span class="string">&#x27;resources/fonts/Vera.ttf&#x27;</span>))</span><br><span class="line">pdfmetrics.registerFont(TTFont(<span class="string">&#x27;Font2&#x27;</span>, <span class="string">&#x27;resources/fonts/青呱石头体.ttf&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 写字</span></span><br><span class="line">pdf_canvas.setFont(<span class="string">&#x27;Font2&#x27;</span>, <span class="number">40</span>)</span><br><span class="line">pdf_canvas.setFillColorRGB(<span class="number">0.9</span>, <span class="number">0.5</span>, <span class="number">0.3</span>, <span class="number">1</span>)</span><br><span class="line">pdf_canvas.drawString(width // <span class="number">2</span> - <span class="number">120</span>, height // <span class="number">2</span>, <span class="string">&#x27;你好，世界！&#x27;</span>)</span><br><span class="line">pdf_canvas.setFont(<span class="string">&#x27;Font1&#x27;</span>, <span class="number">40</span>)</span><br><span class="line">pdf_canvas.setFillColorRGB(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0.5</span>)</span><br><span class="line">pdf_canvas.rotate(<span class="number">18</span>)</span><br><span class="line">pdf_canvas.drawString(<span class="number">250</span>, <span class="number">250</span>, <span class="string">&#x27;hello, world!&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存</span></span><br><span class="line">pdf_canvas.save()</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码如果不太理解也没有关系，等真正需要用Python创建PDF文档的时候，再好好研读一下<code>reportlab</code>的<a target="_blank" rel="noopener" href="https://www.reportlab.com/docs/reportlab-userguide.pdf">官方文档</a>就可以了。</p>
+<blockquote>
+<p><strong>提示</strong>：上面代码中用到的图片和字体，可以在后面的百度云盘链接中获取。链接:<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g">https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g</a> 提取码:e7b4。</p>
+</blockquote>
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>在学习完上面的内容之后，相信大家已经知道像合并多个PDF文件这样的工作应该如何用Python代码来处理了，赶紧自己动手试一试吧。</p>
+
+		</div>
+
+		<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC80NjIyNC8yMjczNQ==">
+	<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+	</script>
+<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+<!-- City版安装代码已完成 -->
+		
+	</article>
+
+	<div id="toc">
+		
+	</div>
+
+</div>
+
+<!-- <div id="paginator"> -->
+<!-- 	 -->
+<!-- </div> -->
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

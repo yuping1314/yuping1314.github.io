@@ -1,0 +1,1119 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title> [ 小田技术博客 ]</title>
+	
+	
+	<!-- stylesheets list from _config.yml -->
+	
+	<link rel="stylesheet" href="/css/PreciousJoy.css">
+	
+	<link rel="stylesheet" href="/css/top-bar.css">
+	
+	<link rel="stylesheet" href="/css/menu-outer.css">
+	
+	<link rel="stylesheet" href="/css/content-outer.css">
+	
+	<link rel="stylesheet" href="/css/bottom-outer.css">
+	
+	<link rel="stylesheet" href="/css/atom-one-dark.css">
+	
+	<link rel="stylesheet" href="/css/recent-posts-item.css">
+	
+	<link rel="stylesheet" href="/css/article-sidebar-toc.css">
+	
+	<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+	
+	<link rel="stylesheet" href="/css/search.css">
+	
+	<link rel="stylesheet" href="/css/toc.css">
+	
+	<link rel="stylesheet" href="/css/sidebar.css">
+	
+	<link rel="stylesheet" href="/css/archive.css">
+	
+	<link rel="stylesheet" href="/css/Z-last-cover-others.css">
+	
+	
+	
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body id="wrapper">
+
+	<div id="">
+		
+		<div id="top-bar">
+			
+			<div id="avatar-box">
+				<img 
+				class="avatar"
+				src="/images/your_picture_name.png" 
+				alt="avatar">
+			</div>
+
+			<div id="top-bar-text">
+				<div id="top-bar-title">
+					fireworks99
+				</div>
+				<div id="top-bar-slogan">
+					keep hungry keep foolish
+				</div>
+			</div>
+
+		</div>
+
+		<div id="menu-outer">
+			<div id="menu-inner">
+				
+				
+				<div class="menu-item">
+					<a href="/">Home</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/about">About</a>
+				</div>
+				
+				<div class="menu-item">
+					<a href="/archives">Archives</a>
+				</div>
+				
+
+				<div class="menu-item menu-item-search">
+					
+  <span class="local-search local-search-google local-search-plugin">
+      <input type="search" placeholder="站内搜索" id="local-search-input" class="local-search-input-cls" style="">
+      <div id="local-search-result" class="local-search-result-cls"></div>
+  </span>
+	
+				</div>
+
+			</div>
+		</div>
+
+		<div id="content-outer">
+			<div id="content-inner">
+
+				
+
+<div id="recent-posts-box">
+
+  
+  <div id="recent-posts">
+    <!-- <h1>Recent Posts</h1> -->
+    
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC09%E8%AF%BE%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%85%83%E7%BB%84/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.174Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第09课：常用数据结构之元组上一节课为大家讲解了Python中的列表，它是一种容器型数据类型，我们可以通过定义列表类型的变量来保存和操作多个元素。当然，Python中容器型的数据类型肯定不止列表一种，接下来我们为大家讲解另一种重要的容器型数据类型，它的名字叫元组（tuple）。
+定义和使用元组在Python中，元组也是多个元素按照一定的顺序构成的序列。元组和列表的不同之处在于，元组是不可变类型，这就意味着元组类型的变量一旦定义，其中的元素不能再添加或删除，而且元素的值也不能进行修改。定义元组通常使用()字面量语法，也建议大家使用这种方式来创建元组。元组类型支持的运算符跟列表是一样。下面的代码演示了元组的定义和运算。
+123456789101112131415161718192021222324252627282930313233# 定义一个三元组t1 = (30, 10, 55)# 定义一个四元组t2 = (&#x27;骆昊&#x27;, 40, True, &#x27;四川成都&#x27;)# 查看变量的类型print(type(t1), type(t2))    # &lt;cla -->
+        <!-- </div> -->
+
+        
+        <h2 id="第09课：常用数据结构之元组"><a href="#第09课：常用数据结构之元组" class="headerlink" title="第09课：常用数据结构之元组"></a>第09课：常用数据结构之元组</h2><p>上一节课为大家讲解了Python中的列表，它是一种容器型数据类型，我们可以通过定义列表类型的变量来保存和操作多个元素。当然，Python中容器型的数据类型肯定不止列表一种，接下来我们为大家讲解另一种重要的容器型数据类型，它的名字叫元组（tuple）。</p>
+<h3 id="定义和使用元组"><a href="#定义和使用元组" class="headerlink" title="定义和使用元组"></a>定义和使用元组</h3><p>在Python中，元组也是多个元素按照一定的顺序构成的序列。元组和列表的不同之处在于，元组是不可变类型，这就意味着元组类型的变量一旦定义，其中的元素不能再添加或删除，而且元素的值也不能进行修改。定义元组通常使用<code>()</code>字面量语法，也建议大家使用这种方式来创建元组。元组类型支持的运算符跟列表是一样。下面的代码演示了元组的定义和运算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义一个三元组</span></span><br><span class="line">t1 = (<span class="number">30</span>, <span class="number">10</span>, <span class="number">55</span>)</span><br><span class="line"><span class="comment"># 定义一个四元组</span></span><br><span class="line">t2 = (<span class="string">&#x27;骆昊&#x27;</span>, <span class="number">40</span>, <span class="literal">True</span>, <span class="string">&#x27;四川成都&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看变量的类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(t1), <span class="built_in">type</span>(t2))    <span class="comment"># &lt;class &#x27;tuple&#x27;&gt; &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line"><span class="comment"># 查看元组中元素的数量</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(t1), <span class="built_in">len</span>(t2))      <span class="comment"># 3 4</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过索引运算获取元组中的元素</span></span><br><span class="line"><span class="built_in">print</span>(t1[<span class="number">0</span>], t1[-<span class="number">3</span>])         <span class="comment"># 30 30</span></span><br><span class="line"><span class="built_in">print</span>(t2[<span class="number">3</span>], t2[-<span class="number">1</span>])         <span class="comment"># 四川成都 四川成都</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环遍历元组中的元素</span></span><br><span class="line"><span class="keyword">for</span> member <span class="keyword">in</span> t2:</span><br><span class="line">    <span class="built_in">print</span>(member)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 成员运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">100</span> <span class="keyword">in</span> t1)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">40</span> <span class="keyword">in</span> t2)     <span class="comment"># True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 拼接</span></span><br><span class="line">t3 = t1 + t2</span><br><span class="line"><span class="built_in">print</span>(t3)           <span class="comment"># (30, 10, 55, &#x27;骆昊&#x27;, 40, True, &#x27;四川成都&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片</span></span><br><span class="line"><span class="built_in">print</span>(t3[::<span class="number">3</span>])      <span class="comment"># (30, &#x27;骆昊&#x27;, &#x27;四川成都&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算</span></span><br><span class="line"><span class="built_in">print</span>(t1 == t3)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(t1 &gt;= t3)    <span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(t1 &lt; (<span class="number">30</span>, <span class="number">11</span>, <span class="number">55</span>))    <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<p>一个元组中如果有两个元素，我们就称之为二元组；一个元组中如果五个元素，我们就称之为五元组。需要提醒大家注意的是，<code>()</code>表示空元组，但是如果元组中只有一个元素，需要加上一个逗号，否则<code>()</code>就不是代表元组的字面量语法，而是改变运算优先级的圆括号，所以<code>(&#39;hello&#39;, )</code>和<code>(100, )</code>才是一元组，而<code>(&#39;hello&#39;)</code>和<code>(100)</code>只是字符串和整数。我们可以通过下面的代码来加以验证。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 空元组</span></span><br><span class="line">a = ()</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))    <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line"><span class="comment"># 不是元组</span></span><br><span class="line">b = (<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))    <span class="comment"># &lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line">c = (<span class="number">100</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(c))    <span class="comment"># &lt;class &#x27;int&#x27;&gt;</span></span><br><span class="line"><span class="comment"># 一元组</span></span><br><span class="line">d = (<span class="string">&#x27;hello&#x27;</span>, )</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(d))    <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br><span class="line">e = (<span class="number">100</span>, )</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(e))    <span class="comment"># &lt;class &#x27;tuple&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="元组的应用场景"><a href="#元组的应用场景" class="headerlink" title="元组的应用场景"></a>元组的应用场景</h3><p>讲到这里，相信大家一定迫切的想知道元组有哪些应用场景，我们给大家举几个例子。</p>
+<h4 id="例子1：打包和解包操作。"><a href="#例子1：打包和解包操作。" class="headerlink" title="例子1：打包和解包操作。"></a>例子1：打包和解包操作。</h4><p>当我们把多个用逗号分隔的值赋给一个变量时，多个值会打包成一个元组类型；当我们把一个元组赋值给多个变量时，元组会解包成多个值然后分别赋给对应的变量，如下面的代码所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打包</span></span><br><span class="line">a = <span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a), a)    <span class="comment"># &lt;class &#x27;tuple&#x27;&gt; (1, 10, 100)</span></span><br><span class="line"><span class="comment"># 解包</span></span><br><span class="line">i, j, k = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k)       <span class="comment"># 1 10 100</span></span><br></pre></td></tr></table></figure>
+
+<p>在解包时，如果解包出来的元素个数和变量个数不对应，会引发<code>ValueError</code>异常，错误信息为：<code>too many values to unpack</code>（解包的值太多）或<code>not enough values to unpack</code>（解包的值不足）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">1000</span></span><br><span class="line"><span class="comment"># i, j, k = a             # ValueError: too many values to unpack (expected 3)</span></span><br><span class="line"><span class="comment"># i, j, k, l, m, n = a    # ValueError: not enough values to unpack (expected 6, got 4)</span></span><br></pre></td></tr></table></figure>
+
+<p>有一种解决变量个数少于元素的个数方法，就是使用星号表达式，我们之前讲函数的可变参数时使用过星号表达式。有了星号表达式，我们就可以让一个变量接收多个值，代码如下所示。需要注意的是，用星号表达式修饰的变量会变成一个列表，列表中有0个或多个元素。还有在解包语法中，星号表达式只能出现一次。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>, <span class="number">1000</span></span><br><span class="line">i, j, *k = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k)          <span class="comment"># 1 10 [100, 1000]</span></span><br><span class="line">i, *j, k = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k)          <span class="comment"># 1 [10, 100] 1000</span></span><br><span class="line">*i, j, k = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k)          <span class="comment"># [1, 10] 100 1000</span></span><br><span class="line">*i, j = a</span><br><span class="line"><span class="built_in">print</span>(i, j)             <span class="comment"># [1, 10, 100] 1000</span></span><br><span class="line">i, *j = a</span><br><span class="line"><span class="built_in">print</span>(i, j)             <span class="comment"># 1 [10, 100, 1000]</span></span><br><span class="line">i, j, k, *l = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k, l)       <span class="comment"># 1 10 100 [1000]</span></span><br><span class="line">i, j, k, l, *m = a</span><br><span class="line"><span class="built_in">print</span>(i, j, k, l, m)    <span class="comment"># 1 10 100 1000 []</span></span><br></pre></td></tr></table></figure>
+
+<p>需要说明一点，解包语法对所有的序列都成立，这就意味着对列表以及我们之前讲到的<code>range</code>函数返回的范围序列都可以使用解包语法。大家可以尝试运行下面的代码，看看会出现怎样的结果。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a, b, *c = <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(a, b, c)</span><br><span class="line">a, b, c = [<span class="number">1</span>, <span class="number">10</span>, <span class="number">100</span>]</span><br><span class="line"><span class="built_in">print</span>(a, b, c)</span><br><span class="line">a, *b, c = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(a, b, c)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子2：交换两个变量的值。"><a href="#例子2：交换两个变量的值。" class="headerlink" title="例子2：交换两个变量的值。"></a>例子2：交换两个变量的值。</h4><p>交换两个变量的值是编程语言中的一个经典案例，在很多编程语言中，交换两个变量的值都需要借助一个中间变量才能做到，如果不用中间变量就需要使用比较晦涩的位运算来实现。在Python中，交换两个变量<code>a</code>和<code>b</code>的值只需要使用如下所示的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure>
+
+<p>同理，如果要将三个变量<code>a</code>、<code>b</code>、<code>c</code>的值互换，即<code>b</code>赋给<code>a</code>，<code>c</code>赋给<code>b</code>，<code>a</code>赋给<code>c</code>，也可以如法炮制。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b, c = b, c, a</span><br></pre></td></tr></table></figure>
+
+<p>需要说明的是，上面并没有用到打包和解包语法，Python的字节码指令中有<code>ROT_TWO</code>和<code>ROT_THREE</code>这样的指令可以实现这个操作，效率是非常高的。但是如果有多于三个变量的值要依次互换，这个时候没有直接可用的字节码指令，执行的原理就是我们上面讲解的打包和解包操作。</p>
+<h3 id="元组和列表的比较"><a href="#元组和列表的比较" class="headerlink" title="元组和列表的比较"></a>元组和列表的比较</h3><p>这里还有一个非常值得探讨的问题，Python中已经有了列表类型，为什么还需要元组这样的类型呢？这个问题对于初学者来说似乎有点困难，不过没有关系，我们先抛出观点，大家可以一边学习一边慢慢体会。</p>
+<ol>
+<li><p>元组是不可变类型，<strong>不可变类型更适合多线程环境</strong>，因为它降低了并发访问变量的同步化开销。关于这一点，我们会在后面讲解多线程的时候为大家详细论述。</p>
+</li>
+<li><p>元组是不可变类型，通常<strong>不可变类型在创建时间和占用空间上面都优于对应的可变类型</strong>。我们可以使用<code>sys</code>模块的<code>getsizeof</code>函数来检查保存相同元素的元组和列表各自占用了多少内存空间。我们也可以使用<code>timeit</code>模块的<code>timeit</code>函数来看看创建保存相同元素的元组和列表各自花费的时间，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"></span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">100000</span>))</span><br><span class="line">b = <span class="built_in">tuple</span>(<span class="built_in">range</span>(<span class="number">100000</span>))</span><br><span class="line"><span class="built_in">print</span>(sys.getsizeof(a), sys.getsizeof(b))    <span class="comment"># 900120 800056</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(timeit.timeit(<span class="string">&#x27;[1, 2, 3, 4, 5, 6, 7, 8, 9]&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(timeit.timeit(<span class="string">&#x27;(1, 2, 3, 4, 5, 6, 7, 8, 9)&#x27;</span>))</span><br></pre></td></tr></table></figure></li>
+<li><p>Python中的元组和列表是可以相互转换的，我们可以通过下面的代码来做到。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将元组转换成列表</span></span><br><span class="line">info = (<span class="string">&#x27;骆昊&#x27;</span>, <span class="number">175</span>, <span class="literal">True</span>, <span class="string">&#x27;四川成都&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(info))       <span class="comment"># [&#x27;骆昊&#x27;, 175, True, &#x27;四川成都&#x27;]</span></span><br><span class="line"><span class="comment"># 将列表转换成元组</span></span><br><span class="line">fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">tuple</span>(fruits))    <span class="comment"># (&#x27;apple&#x27;, &#x27;banana&#x27;, &#x27;orange&#x27;)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p><strong>列表和元组都是容器型的数据类型</strong>，即一个变量可以保存多个数据。<strong>列表是可变数据类型</strong>，<strong>元组是不可变数据类型</strong>，所以列表添加元素、删除元素、清空、排序等方法对于元组来说是不成立的。但是列表和元组都可以进行<strong>拼接</strong>、<strong>成员运算</strong>、<strong>索引和切片</strong>这些操作，后面我们要讲到的字符串类型也是这样，因为字符串就是字符按一定顺序构成的序列，在这一点上三者并没有什么区别。我们<strong>推荐大家使用列表的生成式语法来创建列表</strong>，它很好用，也是Python中非常有特色的语法。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第09课：常用数据结构之元组/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC08%E8%AF%BE%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B9%8B%E5%88%97%E8%A1%A8/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.165Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第08课：常用数据结构之列表在开始本节课的内容之前，我们先给大家一个编程任务，将一颗色子掷6000次，统计每个点数出现的次数。这个任务对大家来说应该是非常简单的，我们可以用1到6均匀分布的随机数来模拟掷色子，然后用6个变量分别记录每个点数出现的次数，相信大家都能写出下面的代码。
+12345678910111213141516171819202122232425262728import randomf1 = 0f2 = 0f3 = 0f4 = 0f5 = 0f6 = 0for _ in range(6000):    face = random.randint(1, 6)    if face == 1:        f1 += 1    elif face == 2:        f2 += 1    elif face == 3:        f3 += 1    elif face == 4:        f4 += 1    elif face == 5:        f5 += 1    else:        f6 += 1print(f&#x27;1点出现了&# -->
+        <!-- </div> -->
+
+        
+        <h2 id="第08课：常用数据结构之列表"><a href="#第08课：常用数据结构之列表" class="headerlink" title="第08课：常用数据结构之列表"></a>第08课：常用数据结构之列表</h2><p>在开始本节课的内容之前，我们先给大家一个编程任务，将一颗色子掷<code>6000</code>次，统计每个点数出现的次数。这个任务对大家来说应该是非常简单的，我们可以用<code>1</code>到<code>6</code>均匀分布的随机数来模拟掷色子，然后用<code>6</code>个变量分别记录每个点数出现的次数，相信大家都能写出下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">f1 = <span class="number">0</span></span><br><span class="line">f2 = <span class="number">0</span></span><br><span class="line">f3 = <span class="number">0</span></span><br><span class="line">f4 = <span class="number">0</span></span><br><span class="line">f5 = <span class="number">0</span></span><br><span class="line">f6 = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6000</span>):</span><br><span class="line">    face = random.randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">    <span class="keyword">if</span> face == <span class="number">1</span>:</span><br><span class="line">        f1 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> face == <span class="number">2</span>:</span><br><span class="line">        f2 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> face == <span class="number">3</span>:</span><br><span class="line">        f3 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> face == <span class="number">4</span>:</span><br><span class="line">        f4 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">elif</span> face == <span class="number">5</span>:</span><br><span class="line">        f5 += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        f6 += <span class="number">1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;1点出现了<span class="subst">&#123;f1&#125;</span>次&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;2点出现了<span class="subst">&#123;f2&#125;</span>次&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;3点出现了<span class="subst">&#123;f3&#125;</span>次&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;4点出现了<span class="subst">&#123;f4&#125;</span>次&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;5点出现了<span class="subst">&#123;f5&#125;</span>次&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;6点出现了<span class="subst">&#123;f6&#125;</span>次&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>看看上面的代码，相信大家一定觉得它非常的“笨重”和“丑陋”，更可怕的是，如果要统计掷两颗或者更多的色子统计每个点数出现的次数，那就需要定义更多的变量，写更多的分支结构。讲到这里，相信大家一定想问：有没有办法用一个变量来保存多个数据，有没有办法用统一的代码对多个数据进行操作？答案是肯定的，在Python中我们可以通过容器类型的变量来保存和操作多个数据，我们首先为大家介绍列表（list）这种新的数据类型。</p>
+<h3 id="定义和使用列表"><a href="#定义和使用列表" class="headerlink" title="定义和使用列表"></a>定义和使用列表</h3><p>在Python中，<strong>列表是由一系元素按特定顺序构成的数据序列</strong>，这样就意味着定义一个列表类型的变量，<strong>可以保存多个数据</strong>，而且<strong>允许有重复的数据</strong>。跟上一课我们讲到的字符串类型一样，列表也是一种结构化的、非标量类型，操作一个列表类型的变量，除了可以使用运算符还可以使用它的方法。</p>
+<p>在Python中，可以使用<code>[]</code>字面量语法来定义列表，列表中的多个元素用逗号进行分隔，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">items1 = [<span class="number">35</span>, <span class="number">12</span>, <span class="number">99</span>, <span class="number">68</span>, <span class="number">55</span>, <span class="number">87</span>]</span><br><span class="line">items2 = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>除此以外，还可以通过Python内置的<code>list</code>函数将其他序列变成列表。准确的说，<code>list</code>并不是一个普通的函数，它是创建列表对象的构造器（后面会讲到对象和构造器这两个概念）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">items1 = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>))</span><br><span class="line"><span class="built_in">print</span>(items1)    <span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line">items2 = <span class="built_in">list</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(items2)    <span class="comment"># [&#x27;h&#x27;, &#x27;e&#x27;, &#x27;l&#x27;, &#x27;l&#x27;, &#x27;o&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>需要说明的是，列表是一种可变数据类型，也就是说列表可以添加元素、删除元素、更新元素，这一点跟我们上一课讲到的字符串有着鲜明的差别。字符串是一种不可变数据类型，也就是说对字符串做拼接、重复、转换大小写、修剪空格等操作的时候会产生新的字符串，原来的字符串并没有发生任何改变。</p>
+<h4 id="列表的运算符"><a href="#列表的运算符" class="headerlink" title="列表的运算符"></a>列表的运算符</h4><p>和字符串类型一样，列表也支持拼接、重复、成员运算、索引和切片以及比较运算，对此我们不再进行赘述，请大家参考下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">items1 = [<span class="number">35</span>, <span class="number">12</span>, <span class="number">99</span>, <span class="number">68</span>, <span class="number">55</span>, <span class="number">87</span>]</span><br><span class="line">items2 = [<span class="number">45</span>, <span class="number">8</span>, <span class="number">29</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的拼接</span></span><br><span class="line">items3 = items1 + items2</span><br><span class="line"><span class="built_in">print</span>(items3)    <span class="comment"># [35, 12, 99, 68, 55, 87, 45, 8, 29]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的重复</span></span><br><span class="line">items4 = [<span class="string">&#x27;hello&#x27;</span>] * <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(items4)    <span class="comment"># [&#x27;hello&#x27;, &#x27;hello&#x27;, &#x27;hello&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的成员运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">100</span> <span class="keyword">in</span> items3)        <span class="comment"># False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span> <span class="keyword">in</span> items4)    <span class="comment"># True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取列表的长度(元素个数)</span></span><br><span class="line">size = <span class="built_in">len</span>(items3)</span><br><span class="line"><span class="built_in">print</span>(size)                 <span class="comment"># 9</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的索引</span></span><br><span class="line"><span class="built_in">print</span>(items3[<span class="number">0</span>], items3[-size])        <span class="comment"># 35 35</span></span><br><span class="line">items3[-<span class="number">1</span>] = <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(items3[size - <span class="number">1</span>], items3[-<span class="number">1</span>])    <span class="comment"># 100 100</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的切片</span></span><br><span class="line"><span class="built_in">print</span>(items3[:<span class="number">5</span>])          <span class="comment"># [35, 12, 99, 68, 55]</span></span><br><span class="line"><span class="built_in">print</span>(items3[<span class="number">4</span>:])          <span class="comment"># [55, 87, 45, 8, 100]</span></span><br><span class="line"><span class="built_in">print</span>(items3[-<span class="number">5</span>:-<span class="number">7</span>:-<span class="number">1</span>])    <span class="comment"># [55, 68]</span></span><br><span class="line"><span class="built_in">print</span>(items3[::-<span class="number">2</span>])        <span class="comment"># [100, 45, 55, 99, 35]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表的比较运算</span></span><br><span class="line">items5 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">items6 = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">1</span>, <span class="number">5</span>))</span><br><span class="line"><span class="comment"># 两个列表比较相等性比的是对应索引位置上的元素是否相等</span></span><br><span class="line"><span class="built_in">print</span>(items5 == items6)    <span class="comment"># True</span></span><br><span class="line">items7 = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]</span><br><span class="line"><span class="comment"># 两个列表比较大小比的是对应索引位置上的元素的大小</span></span><br><span class="line"><span class="built_in">print</span>(items5 &lt;= items7)    <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<p>值得一提的是，由于列表是可变类型，所以通过索引操作既可以获取列表中的元素，也可以更新列表中的元素。对列表做索引操作一样要注意索引越界的问题，对于有<code>N</code>个元素的列表，正向索引的范围是<code>0</code>到<code>N-1</code>，负向索引的范围是<code>-1</code>到<code>-N</code>，如果超出这个范围，将引发<code>IndexError</code>异常，错误信息为：<code>list index out of range</code>。</p>
+<h4 id="列表元素的遍历"><a href="#列表元素的遍历" class="headerlink" title="列表元素的遍历"></a>列表元素的遍历</h4><p>如果想逐个取出列表中的元素，可以使用<code>for</code>循环的，有以下两种做法。</p>
+<p>方法一：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(items)):</span><br><span class="line">    <span class="built_in">print</span>(items[index])</span><br></pre></td></tr></table></figure>
+
+<p>方法二：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> items:</span><br><span class="line">    <span class="built_in">print</span>(item)</span><br></pre></td></tr></table></figure>
+
+<p>讲到这里，我们可以用列表的知识来重构上面“掷色子统计每个点数出现次数”的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">counters = [<span class="number">0</span>] * <span class="number">6</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">6000</span>):</span><br><span class="line">    face = random.randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">    counters[face - <span class="number">1</span>] += <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> face <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">7</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;face&#125;</span>点出现了<span class="subst">&#123;counters[face - <span class="number">1</span>]&#125;</span>次&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码中，我们用<code>counters</code>列表中的六个元素分别表示1到6的点数出现的次数，最开始的时候六个元素的值都是<code>0</code>。接下来用随机数模拟掷色子，如果摇出1点<code>counters[0]</code>的值加<code>1</code>，如果摇出2点<code>counters[1]</code>的值加<code>1</code>，以此类推。大家感受一下，这段代码是不是比之前的代码要简单优雅很多。</p>
+<h3 id="列表的方法"><a href="#列表的方法" class="headerlink" title="列表的方法"></a>列表的方法</h3><p>和字符串一样，列表类型的方法也很多，下面为大家讲解比较重要的方法。</p>
+<h4 id="添加和删除元素"><a href="#添加和删除元素" class="headerlink" title="添加和删除元素"></a>添加和删除元素</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用append方法在列表尾部添加元素</span></span><br><span class="line">items.append(<span class="string">&#x27;Swift&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Python&#x27;, &#x27;Java&#x27;, &#x27;Go&#x27;, &#x27;Kotlin&#x27;, &#x27;Swift&#x27;]</span></span><br><span class="line"><span class="comment"># 使用insert方法在列表指定索引位置插入元素</span></span><br><span class="line">items.insert(<span class="number">2</span>, <span class="string">&#x27;SQL&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Python&#x27;, &#x27;Java&#x27;, &#x27;SQL&#x27;, &#x27;Go&#x27;, &#x27;Kotlin&#x27;, &#x27;Swift&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除指定的元素</span></span><br><span class="line">items.remove(<span class="string">&#x27;Java&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Python&#x27;, &#x27;SQL&#x27;, &#x27;Go&#x27;, &#x27;Kotlin&#x27;, &#x27;Swift&#x27;]</span></span><br><span class="line"><span class="comment"># 删除指定索引位置的元素</span></span><br><span class="line">items.pop(<span class="number">0</span>)</span><br><span class="line">items.pop(<span class="built_in">len</span>(items) - <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;SQL&#x27;, &#x27;Go&#x27;, &#x27;Kotlin&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空列表中的元素</span></span><br><span class="line">items.clear()</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># []</span></span><br></pre></td></tr></table></figure>
+
+<p>需要提醒大家，在使用<code>remove</code>方法删除元素时，如果要删除的元素并不在列表中，会引发<code>ValueError</code>异常，错误消息是：<code>list.remove(x): x not in list</code>。在使用<code>pop</code>方法删除元素时，如果索引的值超出了范围，会引发<code>IndexError</code>异常，错误消息是：<code>pop index out of range</code>。</p>
+<p>从列表中删除元素其实还有一种方式，就是使用Python中的<code>del</code>关键字后面跟要删除的元素，这种做法跟使用<code>pop</code>方法指定索引删除元素没有实质性的区别，但后者会返回删除的元素，前者在性能上略优（<code>del</code>对应字节码指令是<code>DELETE_SUBSCR</code>，而<code>pop</code>对应的字节码指令是<code>CALL_METHOD</code>和<code>POP_TOP</code>，不理解就跳过，不用管它！！！）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>]</span><br><span class="line"><span class="keyword">del</span> items[<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Python&#x27;, &#x27;Go&#x27;, &#x27;Kotlin&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="元素位置和次数"><a href="#元素位置和次数" class="headerlink" title="元素位置和次数"></a>元素位置和次数</h4><p>列表类型的<code>index</code>方法可以查找某个元素在列表中的索引位置；因为列表中允许有重复的元素，所以列表类型提供了<code>count</code>方法来统计一个元素在列表中出现的次数。请看下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>, <span class="string">&#x27;Python&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找元素的索引位置</span></span><br><span class="line"><span class="built_in">print</span>(items.index(<span class="string">&#x27;Python&#x27;</span>))       <span class="comment"># 0</span></span><br><span class="line"><span class="built_in">print</span>(items.index(<span class="string">&#x27;Python&#x27;</span>, <span class="number">2</span>))    <span class="comment"># 5</span></span><br><span class="line"><span class="comment"># 注意：虽然列表中有&#x27;Java&#x27;，但是从索引为3这个位置开始后面是没有&#x27;Java&#x27;的</span></span><br><span class="line"><span class="built_in">print</span>(items.index(<span class="string">&#x27;Java&#x27;</span>, <span class="number">3</span>))      <span class="comment"># ValueError: &#x27;Java&#x27; is not in list</span></span><br></pre></td></tr></table></figure>
+
+<p>再来看看下面这段代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>, <span class="string">&#x27;Python&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找元素出现的次数</span></span><br><span class="line"><span class="built_in">print</span>(items.count(<span class="string">&#x27;Python&#x27;</span>))    <span class="comment"># 2</span></span><br><span class="line"><span class="built_in">print</span>(items.count(<span class="string">&#x27;Go&#x27;</span>))        <span class="comment"># 1</span></span><br><span class="line"><span class="built_in">print</span>(items.count(<span class="string">&#x27;Swfit&#x27;</span>))     <span class="comment"># 0</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="元素排序和反转"><a href="#元素排序和反转" class="headerlink" title="元素排序和反转"></a>元素排序和反转</h4><p>列表的<code>sort</code>操作可以实现列表元素的排序，而<code>reverse</code>操作可以实现元素的反转，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">items = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;Java&#x27;</span>, <span class="string">&#x27;Go&#x27;</span>, <span class="string">&#x27;Kotlin&#x27;</span>, <span class="string">&#x27;Python&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 排序</span></span><br><span class="line">items.sort()</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Go&#x27;, &#x27;Java&#x27;, &#x27;Kotlin&#x27;, &#x27;Python&#x27;, &#x27;Python&#x27;]</span></span><br><span class="line"><span class="comment"># 反转</span></span><br><span class="line">items.reverse()</span><br><span class="line"><span class="built_in">print</span>(items)    <span class="comment"># [&#x27;Python&#x27;, &#x27;Python&#x27;, &#x27;Kotlin&#x27;, &#x27;Java&#x27;, &#x27;Go&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列表的生成式"><a href="#列表的生成式" class="headerlink" title="列表的生成式"></a>列表的生成式</h3><p>在Python中，列表还可以通过一种特殊的字面量语法来创建，这种语法叫做生成式。我们给出两段代码，大家可以做一个对比，看看哪一种方式更加简单优雅。</p>
+<p>通过<code>for</code>循环为空列表添加元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个由1到9的数字构成的列表</span></span><br><span class="line">items1 = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    items1.append(x)</span><br><span class="line"><span class="built_in">print</span>(items1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个由&#x27;hello world&#x27;中除空格和元音字母外的字符构成的列表</span></span><br><span class="line">items2 = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;hello world&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">&#x27; aeiou&#x27;</span>:</span><br><span class="line">        items2.append(x)</span><br><span class="line"><span class="built_in">print</span>(items2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个由个两个字符串中字符的笛卡尔积构成的列表</span></span><br><span class="line">items3 = []</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;ABC&#x27;</span>:</span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="string">&#x27;12&#x27;</span>:</span><br><span class="line">        items3.append(x + y)</span><br><span class="line"><span class="built_in">print</span>(items3)</span><br></pre></td></tr></table></figure>
+
+<p>通过生成式创建列表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个由1到9的数字构成的列表</span></span><br><span class="line">items1 = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>)]</span><br><span class="line"><span class="built_in">print</span>(items1)    <span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个由&#x27;hello world&#x27;中除空格和元音字母外的字符构成的列表</span></span><br><span class="line">items2 = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;hello world&#x27;</span> <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">&#x27; aeiou&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(items2)    <span class="comment"># [&#x27;h&#x27;, &#x27;l&#x27;, &#x27;l&#x27;, &#x27;w&#x27;, &#x27;r&#x27;, &#x27;l&#x27;, &#x27;d&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个由个两个字符串中字符的笛卡尔积构成的列表</span></span><br><span class="line">items3 = [x + y <span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;ABC&#x27;</span> <span class="keyword">for</span> y <span class="keyword">in</span> <span class="string">&#x27;12&#x27;</span>]</span><br><span class="line"><span class="built_in">print</span>(items3)    <span class="comment"># [&#x27;A1&#x27;, &#x27;A2&#x27;, &#x27;B1&#x27;, &#x27;B2&#x27;, &#x27;C1&#x27;, &#x27;C2&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>下面这种方式不仅代码简单优雅，而且性能也优于上面使用<code>for</code>循环和<code>append</code>方法向空列表中追加元素的方式。可以简单跟大家交待下为什么生成式拥有更好的性能，那是因为Python解释器的字节码指令中有专门针对生成式的指令（<code>LIST_APPEND</code>指令）；而<code>for</code>循环是通过方法调用（<code>LOAD_METHOD</code>和<code>CALL_METHOD</code>指令）的方式为列表添加元素，方法调用本身就是一个相对耗时的操作。对这一点不理解也没有关系，记住“<strong>强烈建议用生成式语法来创建列表</strong>”这个结论就可以了。</p>
+<h3 id="嵌套的列表"><a href="#嵌套的列表" class="headerlink" title="嵌套的列表"></a>嵌套的列表</h3><p>Python语言没有限定列表中的元素必须是相同的数据类型，也就是说一个列表中的元素可以任意的数据类型，当然也包括列表。如果列表中的元素又是列表，那么我们可以称之为嵌套的列表。嵌套的列表可以用来表示表格或数学上的矩阵，例如：我们想保存5个学生3门课程的成绩，可以定义一个保存5个元素的列表保存5个学生的信息，而每个列表元素又是3个元素构成的列表，分别代表3门课程的成绩。但是，一定要注意下面的代码是有问题的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scores = [[<span class="number">0</span>] * <span class="number">3</span>] * <span class="number">5</span></span><br><span class="line"><span class="built_in">print</span>(scores)    <span class="comment"># [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span></span><br></pre></td></tr></table></figure>
+
+<p>看上去我们好像创建了一个<code>5 * 3</code>的嵌套列表，但实际上当我们录入第一个学生的第一门成绩后，你就会发现问题来了，我们看看下面代码的输出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 嵌套的列表需要多次索引操作才能获取元素</span></span><br><span class="line">scores[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">95</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line"><span class="comment"># [[95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0], [95, 0, 0]]</span></span><br></pre></td></tr></table></figure>
+
+<p>我们不去过多的解释为什么会出现这样的问题，如果想深入研究这个问题，可以通过<a target="_blank" rel="noopener" href="http://www.pythontutor.com/visualize.html">Python Tutor</a>网站的可视化代码执行功能，看看创建列表时计算机内存中发生了怎样的变化，下面的图就是在这个网站上生成的。建议大家不去纠结这个问题，现阶段只需要记住不能用<code>[[0] * 3] * 5]</code>这种方式来创建嵌套列表就行了。那么创建嵌套列表的正确做法是什么呢，下面的代码会给你答案。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">scores = [[<span class="number">0</span>] * <span class="number">3</span> <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>)]</span><br><span class="line">scores[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">95</span></span><br><span class="line"><span class="built_in">print</span>(scores)</span><br><span class="line"><span class="comment"># [[95, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>Python中的列表底层是一个可以动态扩容的数组，列表元素在内存中也是连续存储的，所以可以实现随机访问（通过一个有效的索引获取到对应的元素且操作时间与列表元素个数无关）。我们暂时不去触碰这些底层存储细节以及列表每个方法的渐近时间复杂度（执行这个方法耗费的时间跟列表元素个数的关系），等需要的时候再告诉大家。现阶段，大家只需要知道<strong>列表是容器</strong>，可以<strong>保存各种类型的数据</strong>，<strong>可以通过索引操作列表元素</strong>，知道这些就足够了。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第08课：常用数据结构之列表/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC07%E8%AF%BE%EF%BC%9A%E5%88%86%E6%94%AF%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84%E7%9A%84%E5%BA%94%E7%94%A8/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.157Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第07课：分支和循环结构的应用通过上两节课的学习，大家对Python中的分支和循环结构已经有了感性的认识。分支和循环结构的重要性不言而喻，它是构造程序逻辑的基础，对于初学者来说也是比较困难的部分。大部分初学者在学习了分支和循环结构后都能理解它们的用途和用法，但是遇到实际问题的时候又无法下手；看懂别人的代码很容易，但是要自己写出同样的代码却又很难。如果你也有同样的问题和困惑，千万不要沮丧，这只是因为你才刚刚开始编程之旅，你的练习量还没有达到让你可以随心所欲的写出代码的程度，只要加强编程练习，这个问题迟早都会解决的。下面我们就为大家讲解一些经典的案例。
+经典小案例例子1：寻找水仙花数。
+说明：水仙花数也被称为超完全数字不变数、自恋数、自幂数、阿姆斯特朗数，它是一个3位数，该数字每个位上数字的立方之和正好等于它本身，例如：$ 153=1^3+5^3+3^3 $。
+
+这个题目的关键是将一个三位数拆分为个位、十位、百位，这一点利用Python中的//（整除）和%（求模）运算符其实很容易做到，代码如下所示。
+123456789101112&quot;&quot;&quot;找出所有水仙花数Vers -->
+        <!-- </div> -->
+
+        
+        <h2 id="第07课：分支和循环结构的应用"><a href="#第07课：分支和循环结构的应用" class="headerlink" title="第07课：分支和循环结构的应用"></a>第07课：分支和循环结构的应用</h2><p>通过上两节课的学习，大家对Python中的分支和循环结构已经有了感性的认识。<strong>分支和循环结构</strong>的重要性不言而喻，它<strong>是构造程序逻辑的基础</strong>，对于初学者来说也是比较困难的部分。大部分初学者在学习了分支和循环结构后都能理解它们的用途和用法，但是遇到实际问题的时候又无法下手；<strong>看懂别人的代码很容易，但是要自己写出同样的代码却又很难</strong>。如果你也有同样的问题和困惑，千万不要沮丧，这只是因为你才刚刚开始编程之旅，<strong>你的练习量还没有达到让你可以随心所欲的写出代码的程度</strong>，只要加强编程练习，这个问题迟早都会解决的。下面我们就为大家讲解一些经典的案例。</p>
+<h3 id="经典小案例"><a href="#经典小案例" class="headerlink" title="经典小案例"></a>经典小案例</h3><h4 id="例子1：寻找水仙花数。"><a href="#例子1：寻找水仙花数。" class="headerlink" title="例子1：寻找水仙花数。"></a>例子1：寻找水仙花数。</h4><blockquote>
+<p><strong>说明</strong>：水仙花数也被称为超完全数字不变数、自恋数、自幂数、阿姆斯特朗数，它是一个3位数，该数字每个位上数字的立方之和正好等于它本身，例如：$ 153=1^3+5^3+3^3 $。</p>
+</blockquote>
+<p>这个题目的关键是将一个三位数拆分为个位、十位、百位，这一点利用Python中的<code>//</code>（整除）和<code>%</code>（求模）运算符其实很容易做到，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">找出所有水仙花数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>, <span class="number">1000</span>):</span><br><span class="line">    low = num % <span class="number">10</span></span><br><span class="line">    mid = num // <span class="number">10</span> % <span class="number">10</span></span><br><span class="line">    high = num // <span class="number">100</span></span><br><span class="line">    <span class="keyword">if</span> num == low ** <span class="number">3</span> + mid ** <span class="number">3</span> + high ** <span class="number">3</span>:</span><br><span class="line">        <span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure>
+
+<p>上面利用<code>//</code>和<code>%</code>拆分一个数的小技巧在写代码的时候还是很常用的。我们要将一个不知道有多少位的正整数进行反转，例如将<code>12345</code>变成<code>54321</code>，也可以利用这两个运算来实现，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">正整数的反转</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;num = &#x27;</span>))</span><br><span class="line">reversed_num = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> num &gt; <span class="number">0</span>:</span><br><span class="line">    reversed_num = reversed_num * <span class="number">10</span> + num % <span class="number">10</span></span><br><span class="line">    num //= <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(reversed_num)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子2：百钱百鸡问题。"><a href="#例子2：百钱百鸡问题。" class="headerlink" title="例子2：百钱百鸡问题。"></a>例子2：百钱百鸡问题。</h4><blockquote>
+<p><strong>说明</strong>：百钱百鸡是我国古代数学家<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%BC%A0%E4%B8%98%E5%BB%BA/10246238">张丘建</a>在《算经》一书中提出的数学问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？翻译成现代文是：公鸡5元一只，母鸡3元一只，小鸡1元三只，用100块钱买一百只鸡，问公鸡、母鸡、小鸡各有多少只？</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">《百钱百鸡》问题</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># 假设公鸡的数量为x，x的取值范围是0到20</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">21</span>):</span><br><span class="line">    <span class="comment"># 假设母鸡的数量为y，y的取值范围是0到33</span></span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, <span class="number">34</span>):</span><br><span class="line">        z = <span class="number">100</span> - x - y</span><br><span class="line">        <span class="keyword">if</span> <span class="number">5</span> * x + <span class="number">3</span> * y + z // <span class="number">3</span> == <span class="number">100</span> <span class="keyword">and</span> z % <span class="number">3</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;公鸡: <span class="subst">&#123;x&#125;</span>只, 母鸡: <span class="subst">&#123;y&#125;</span>只, 小鸡: <span class="subst">&#123;z&#125;</span>只&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>上面使用的方法叫做<strong>穷举法</strong>，也称为<strong>暴力搜索法</strong>，这种方法通过一项一项的列举备选解决方案中所有可能的候选项并检查每个候选项是否符合问题的描述，最终得到问题的解。这种方法看起来比较笨拙，但对于运算能力非常强大的计算机来说，通常都是一个可行的甚至是不错的选择，只要问题的解存在就能够找到它。</p>
+<h4 id="例子3：CRAPS赌博游戏。"><a href="#例子3：CRAPS赌博游戏。" class="headerlink" title="例子3：CRAPS赌博游戏。"></a>例子3：CRAPS赌博游戏。</h4><blockquote>
+<p><strong>说明</strong>：CRAPS又称花旗骰，是美国拉斯维加斯非常受欢迎的一种的桌上赌博游戏。该游戏使用两粒骰子，玩家通过摇两粒骰子获得点数进行游戏。简化后的规则是：玩家第一次摇骰子如果摇出了7点或11点，玩家胜；玩家第一次如果摇出2点、3点或12点，庄家胜；玩家如果摇出其他点数则玩家继续摇骰子，如果玩家摇出了7点，庄家胜；如果玩家摇出了第一次摇的点数，玩家胜；其他点数玩家继续摇骰子，直到分出胜负。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Craps赌博游戏</span></span><br><span class="line"><span class="string">我们设定游戏开始时玩家有1000元的赌注</span></span><br><span class="line"><span class="string">游戏结束的条件是玩家破产（输光所有的赌注）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line">money = <span class="number">1000</span></span><br><span class="line"><span class="keyword">while</span> money &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;你的总资产为: <span class="subst">&#123;money&#125;</span>元&#x27;</span>)</span><br><span class="line">    go_on = <span class="literal">False</span></span><br><span class="line">    <span class="comment"># 下注金额必须大于0小于等于玩家总资产</span></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        debt = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请下注: &#x27;</span>))</span><br><span class="line">        <span class="keyword">if</span> <span class="number">0</span> &lt; debt &lt;= money:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 第一次摇色子</span></span><br><span class="line">    <span class="comment"># 用1到6均匀分布的随机数模拟摇色子得到的点数</span></span><br><span class="line">    first = randint(<span class="number">1</span>, <span class="number">6</span>) + randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;\n玩家摇出了<span class="subst">&#123;first&#125;</span>点&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> first == <span class="number">7</span> <span class="keyword">or</span> first == <span class="number">11</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;玩家胜!\n&#x27;</span>)</span><br><span class="line">        money += debt</span><br><span class="line">    <span class="keyword">elif</span> first == <span class="number">2</span> <span class="keyword">or</span> first == <span class="number">3</span> <span class="keyword">or</span> first == <span class="number">12</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;庄家胜!\n&#x27;</span>)</span><br><span class="line">        money -= debt</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        go_on = <span class="literal">True</span></span><br><span class="line">    <span class="comment"># 第一次摇色子没有分出胜负游戏继续</span></span><br><span class="line">    <span class="keyword">while</span> go_on:</span><br><span class="line">        go_on = <span class="literal">False</span></span><br><span class="line">        current = randint(<span class="number">1</span>, <span class="number">6</span>) + randint(<span class="number">1</span>, <span class="number">6</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;玩家摇出了<span class="subst">&#123;current&#125;</span>点&#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> current == <span class="number">7</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;庄家胜!\n&#x27;</span>)</span><br><span class="line">            money -= debt</span><br><span class="line">        <span class="keyword">elif</span> current == first:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;玩家胜!\n&#x27;</span>)</span><br><span class="line">            money += debt</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            go_on = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;你破产了, 游戏结束!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子4：斐波那契数列。"><a href="#例子4：斐波那契数列。" class="headerlink" title="例子4：斐波那契数列。"></a>例子4：斐波那契数列。</h4><blockquote>
+<p><strong>说明</strong>：斐波那契数列（Fibonacci sequence），通常也被称作黄金分割数列，是意大利数学家莱昂纳多·斐波那契（Leonardoda Fibonacci）在《计算之书》中研究在理想假设条件下兔子成长率问题而引入的数列，因此这个数列也常被戏称为“兔子数列”。斐波那契数列的特点是数列的前两个数都是1，从第三个数开始，每个数都是它前面两个数的和，按照这个规律，斐波那契数列的前10个数是：<code>1, 1, 2, 3, 5, 8, 13, 21, 34, 55</code>。斐波那契数列在现代物理、准晶体结构、化学等领域都有直接的应用。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输出斐波那契数列前20个数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">20</span>):</span><br><span class="line">    a, b = b, a + b</span><br><span class="line">    <span class="built_in">print</span>(a)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子5：打印100以内的素数。"><a href="#例子5：打印100以内的素数。" class="headerlink" title="例子5：打印100以内的素数。"></a>例子5：打印100以内的素数。</h4><blockquote>
+<p><strong>说明</strong>：素数指的是只能被1和自身整除的正整数（不包括1）。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输出100以内的素数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> num <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">100</span>):</span><br><span class="line">    <span class="comment"># 假设num是素数</span></span><br><span class="line">    is_prime = <span class="literal">True</span></span><br><span class="line">    <span class="comment"># 在2到num-1之间找num的因子</span></span><br><span class="line">    <span class="keyword">for</span> factor <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, num):</span><br><span class="line">        <span class="comment"># 如果找到了num的因子，num就不是素数</span></span><br><span class="line">        <span class="keyword">if</span> num % factor == <span class="number">0</span>:</span><br><span class="line">            is_prime = <span class="literal">False</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="comment"># 如果布尔值为True在num是素数</span></span><br><span class="line">    <span class="keyword">if</span> is_prime:</span><br><span class="line">        <span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure>
+
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>还是那句话：<strong>分支结构和循环结构非常重要</strong>，是构造程序逻辑的基础，<strong>一定要通过大量的练习来达到融会贯通</strong>。刚才讲到的CRAPS赌博游戏那个例子可以作为一个标准，如果你能很顺利的完成这段代码，那么分支和循环结构的知识你就已经掌握了。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第07课：分支和循环结构的应用/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC06%E8%AF%BE%EF%BC%9A%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.148Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第06课：循环结构应用场景我们在写程序的时候，一定会遇到需要重复执行某条指令或某些指令的场景。例如用程序控制机器人踢足球，如果机器人持球而且还没有进入射门范围，那么我们就要一直发出让机器人向球门方向移动的指令。在这个场景中，让机器人向球门方向移动就是一个需要重复的动作，当然这里还会用到上一课讲的分支结构来判断机器人是否持球以及是否进入射门范围。再举一个简单的例子，如果要实现每隔1秒中在屏幕上打印一次“hello, world”并持续打印一个小时，我们肯定不能够直接把print(&#39;hello, world&#39;)这句代码写3600遍，这里我们需要构造循环结构。
+所谓循环结构，就是程序中控制某条或某些指令重复执行的结构。在Python中构造循环结构有两种做法，一种是for-in循环，另一种是while循环。
+for-in循环如果明确的知道循环执行的次数，我们推荐使用for-in循环，例如输出100行的”hello, world“。 被for-in循环控制的语句块也是通过缩进的方式来构造的，这一点跟分支结构完全相同，大家看看下面的代码就明白了。
+12345678910&quot; -->
+        <!-- </div> -->
+
+        
+        <h2 id="第06课：循环结构"><a href="#第06课：循环结构" class="headerlink" title="第06课：循环结构"></a>第06课：循环结构</h2><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>我们在写程序的时候，一定会遇到需要重复执行某条指令或某些指令的场景。例如用程序控制机器人踢足球，如果机器人持球而且还没有进入射门范围，那么我们就要一直发出让机器人向球门方向移动的指令。在这个场景中，让机器人向球门方向移动就是一个需要重复的动作，当然这里还会用到上一课讲的分支结构来判断机器人是否持球以及是否进入射门范围。再举一个简单的例子，如果要实现每隔1秒中在屏幕上打印一次“hello, world”并持续打印一个小时，我们肯定不能够直接把<code>print(&#39;hello, world&#39;)</code>这句代码写3600遍，这里我们需要构造循环结构。</p>
+<p>所谓循环结构，就是程序中控制某条或某些指令重复执行的结构。在Python中构造循环结构有两种做法，一种是<code>for-in</code>循环，另一种是<code>while</code>循环。</p>
+<h3 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h3><p>如果明确的知道循环执行的次数，我们推荐使用<code>for-in</code>循环，例如输出100行的”hello, world“。 被<code>for-in</code>循环控制的语句块也是通过缩进的方式来构造的，这一点跟分支结构完全相同，大家看看下面的代码就明白了。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用for循环实现1~100求和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">total = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">101</span>):</span><br><span class="line">    total += x</span><br><span class="line"><span class="built_in">print</span>(total)</span><br></pre></td></tr></table></figure>
+
+<p>需要说明的是上面代码中的<code>range(1, 101)</code>可以用来构造一个从<code>1</code>到<code>100</code>的范围，当我们把这样一个范围放到<code>for-in</code>循环中，就可以通过前面的循环变量<code>x</code>依次取出从<code>1</code>到<code>100</code>的整数。当然，<code>range</code>的用法非常灵活，下面给出了一个例子：</p>
+<ul>
+<li><code>range(101)</code>：可以用来产生0到100范围的整数，需要注意的是取不到101。</li>
+<li><code>range(1, 101)</code>：可以用来产生1到100范围的整数，相当于前面是闭区间后面是开区间。</li>
+<li><code>range(1, 101, 2)</code>：可以用来产生1到100的奇数，其中2是步长，即每次递增的值。</li>
+<li><code>range(100, 0, -2)</code>：可以用来产生100到1的偶数，其中-2是步长，即每次递减的值。</li>
+</ul>
+<p>知道了这一点，我们可以用下面的代码来实现1~100之间的偶数求和。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用for循环实现1~100之间的偶数求和</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">total = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="number">101</span>, <span class="number">2</span>):</span><br><span class="line">    total += x</span><br><span class="line"><span class="built_in">print</span>(total)</span><br></pre></td></tr></table></figure>
+
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p>如果要构造不知道具体循环次数的循环结构，我们推荐使用<code>while</code>循环。<code>while</code>循环通过一个能够产生<code>bool</code>值的表达式来控制循环，当表达式的值为<code>True</code>时则继续循环，当表达式的值为<code>False</code>时则结束循环。</p>
+<p>下面我们通过一个“猜数字”的小游戏来看看如何使用<code>while</code>循环。猜数字游戏的规则是：计算机出一个<code>1</code>到<code>100</code>之间的随机数，玩家输入自己猜的数字，计算机给出对应的提示信息（大一点、小一点或猜对了），如果玩家猜中了数字，计算机提示用户一共猜了多少次，游戏结束，否则游戏继续。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">猜数字游戏</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># 产生一个1-100范围的随机数</span></span><br><span class="line">answer = random.randint(<span class="number">1</span>, <span class="number">100</span>)</span><br><span class="line">counter = <span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">    counter += <span class="number">1</span></span><br><span class="line">    number = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入: &#x27;</span>))</span><br><span class="line">    <span class="keyword">if</span> number &lt; answer:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;大一点&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span> number &gt; answer:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;小一点&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;恭喜你猜对了!&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="comment"># 当退出while循环的时候显示用户一共猜了多少次</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;你总共猜了<span class="subst">&#123;counter&#125;</span>次&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><p>上面的代码中使用<code>while True</code>构造了一个条件恒成立的循环，也就意味着如果不做特殊处理，循环是不会结束的，这也就是常说的“死循环”。为了在用户猜中数字时能够退出循环结构，我们使用了<code>break</code>关键字，它的作用是提前结束循环。需要注意的是，<code>break</code>只能终止它所在的那个循环，这一点在使用嵌套循环结构时需要引起注意，下面的例子我们会讲到什么是嵌套的循环结构。除了<code>break</code>之外，还有另一个关键字是<code>continue</code>，它可以用来放弃本次循环后续的代码直接让循环进入下一轮。</p>
+<h3 id="嵌套的循环结构"><a href="#嵌套的循环结构" class="headerlink" title="嵌套的循环结构"></a>嵌套的循环结构</h3><p>和分支结构一样，循环结构也是可以嵌套的，也就是说在循环中还可以构造循环结构。下面的例子演示了如何通过嵌套的循环来输出一个乘法口诀表（九九表）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">打印乘法口诀表</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">10</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, i + <span class="number">1</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;i&#125;</span>*<span class="subst">&#123;j&#125;</span>=<span class="subst">&#123;i * j&#125;</span>&#x27;</span>, end=<span class="string">&#x27;\t&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+
+<p>很显然，在上面的代码中，外层循环用来控制一共会产生<code>9</code>行的输出，而内层循环用来控制每一行会输出多少列。内层循环中的输出就是九九表一行中的所有列，所以在内层循环完成时，有一个<code>print()</code>来实现换行输出的效果。</p>
+<h3 id="循环的例子"><a href="#循环的例子" class="headerlink" title="循环的例子"></a>循环的例子</h3><h4 id="例子1：输入一个正整数判断它是不是素数。"><a href="#例子1：输入一个正整数判断它是不是素数。" class="headerlink" title="例子1：输入一个正整数判断它是不是素数。"></a>例子1：输入一个正整数判断它是不是素数。</h4><blockquote>
+<p><strong>提示</strong>：素数指的是只能被1和自身整除的大于1的整数。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输入一个正整数判断它是不是素数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入一个正整数: &#x27;</span>))</span><br><span class="line">end = <span class="built_in">int</span>(num ** <span class="number">0.5</span>)</span><br><span class="line">is_prime = <span class="literal">True</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, end + <span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span> num % x == <span class="number">0</span>:</span><br><span class="line">        is_prime = <span class="literal">False</span></span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">if</span> is_prime <span class="keyword">and</span> num != <span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span>是素数&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span>不是素数&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子2：输入两个正整数，计算它们的最大公约数和最小公倍数。"><a href="#例子2：输入两个正整数，计算它们的最大公约数和最小公倍数。" class="headerlink" title="例子2：输入两个正整数，计算它们的最大公约数和最小公倍数。"></a>例子2：输入两个正整数，计算它们的最大公约数和最小公倍数。</h4><blockquote>
+<p><strong>提示</strong>：两个数的最大公约数是两个数的公共因子中最大的那个数；两个数的最小公倍数则是能够同时被两个数整除的最小的那个数。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输入两个正整数计算它们的最大公约数和最小公倍数</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">x = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line">y = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;y = &#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> factor <span class="keyword">in</span> <span class="built_in">range</span>(x, <span class="number">0</span>, -<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">if</span> x % factor == <span class="number">0</span> <span class="keyword">and</span> y % factor == <span class="number">0</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span>和<span class="subst">&#123;y&#125;</span>的最大公约数是<span class="subst">&#123;factor&#125;</span>&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;x&#125;</span>和<span class="subst">&#123;y&#125;</span>的最小公倍数是<span class="subst">&#123;x * y // factor&#125;</span>&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>学会了Python中的分支结构和循环结构，我们就可以解决很多实际的问题了。通过这节课的学习，大家应该已经知道了可以用<code>for</code>和<code>while</code>关键字来构造循环结构。<strong>如果知道循环的次数，我们通常使用</strong><code>for</code><strong>循环</strong>；如果<strong>循环次数不能确定，可以用</strong><code>while</code><strong>循环</strong>。在循环中还<strong>可以使用</strong><code>break</code><strong>来提前结束循环</strong>。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第06课：循环结构/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC05%E8%AF%BE%EF%BC%9A%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.137Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第05课：分支结构应用场景迄今为止，我们写的Python代码都是一条一条语句顺序执行，这种代码结构通常称之为顺序结构。然而仅有顺序结构并不能解决所有的问题，比如我们设计一个游戏，游戏第一关的通关条件是玩家获得1000分，那么在完成本局游戏后，我们要根据玩家得到分数来决定究竟是进入第二关，还是告诉玩家“Game Over”，这里就会产生两个分支，而且这两个分支只有一个会被执行。类似的场景还有很多，我们将这种结构称之为“分支结构”或“选择结构”。给大家一分钟的时间，你应该可以想到至少5个以上这样的例子，赶紧试一试。
+if语句的使用在Python中，要构造分支结构可以使用if、elif和else关键字。所谓关键字就是有特殊含义的单词，像if和else就是专门用于构造分支结构的关键字，很显然你不能够使用它作为变量名。下面的例子中演示了如何构造一个分支结构。
+12345678910111213&quot;&quot;&quot;用户身份验证Version: 0.1Author: 骆昊&quot;&quot;&quot;username = input(&#x27;请输入用户名: &#x27;)p -->
+        <!-- </div> -->
+
+        
+        <h2 id="第05课：分支结构"><a href="#第05课：分支结构" class="headerlink" title="第05课：分支结构"></a>第05课：分支结构</h2><h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><p>迄今为止，我们写的Python代码都是一条一条语句顺序执行，这种代码结构通常称之为顺序结构。然而仅有顺序结构并不能解决所有的问题，比如我们设计一个游戏，游戏第一关的通关条件是玩家获得1000分，那么在完成本局游戏后，我们要根据玩家得到分数来决定究竟是进入第二关，还是告诉玩家“Game Over”，这里就会产生两个分支，而且这两个分支只有一个会被执行。类似的场景还有很多，我们将这种结构称之为“分支结构”或“选择结构”。给大家一分钟的时间，你应该可以想到至少5个以上这样的例子，赶紧试一试。</p>
+<h3 id="if语句的使用"><a href="#if语句的使用" class="headerlink" title="if语句的使用"></a>if语句的使用</h3><p>在Python中，要构造分支结构可以使用<code>if</code>、<code>elif</code>和<code>else</code>关键字。所谓<strong>关键字</strong>就是有特殊含义的单词，像<code>if</code>和<code>else</code>就是专门用于构造分支结构的关键字，很显然你不能够使用它作为变量名。下面的例子中演示了如何构造一个分支结构。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">用户身份验证</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">username = <span class="built_in">input</span>(<span class="string">&#x27;请输入用户名: &#x27;</span>)</span><br><span class="line">password = <span class="built_in">input</span>(<span class="string">&#x27;请输入口令: &#x27;</span>)</span><br><span class="line"><span class="comment"># 用户名是admin且密码是123456则身份验证成功否则身份验证失败</span></span><br><span class="line"><span class="keyword">if</span> username == <span class="string">&#x27;admin&#x27;</span> <span class="keyword">and</span> password == <span class="string">&#x27;123456&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;身份验证成功!&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;身份验证失败!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>需要说明的是，不同于C++、Java等编程语言，Python中没有用花括号来构造代码块而是<strong>使用了缩进的方式来表示代码的层次结构</strong>，如果<code>if</code>条件成立的情况下需要执行多条语句，只要保持多条语句具有相同的缩进就可以了。换句话说<strong>连续的代码如果又保持了相同的缩进那么它们属于同一个代码块</strong>，相当于是一个执行的整体。<strong>缩进</strong>可以使用任意数量的空格，但<strong>通常使用4个空格</strong>，强烈建议大家<strong>不要使用制表键来缩进代码</strong>，如果你已经习惯了这么做，可以<strong>设置代码编辑工具将1个制表键自动变成4个空格</strong>，很多的代码编辑工具都支持这项功能。</p>
+<blockquote>
+<p><strong>提示</strong>：<code>if</code>和<code>else</code> 的最后面有一个<code>:</code>，它是用英文输入法输入的冒号；程序中输入的<code>&#39;</code>、<code>&quot;</code>、<code>=</code>、<code>(</code>、<code>)</code>等特殊字符，都是在英文输入法状态下输入的。有很多初学者经常不注意这一点，结果运行代码的时候就会遇到很多莫名其妙的错误提示。<strong>强烈建议</strong>大家在写代码的时候都<strong>打开英文输入法</strong>（注意是英文输入法而不是中文输入法的英文输入模式），这样可以避免很多不必要的麻烦。</p>
+</blockquote>
+<p>如果要构造出更多的分支，可以使用<code>if...elif...else...</code>结构或者嵌套的<code>if...else...</code>结构，下面的代码演示了如何利用多分支结构实现分段函数求值。</p>
+<p>$$<br>f(x) = \begin{cases} 3x - 5, &amp; (x \gt 1) \ x + 2, &amp; (-1 \le x \le 1) \ 5x + 3, &amp; (x \lt -1) \end{cases}<br>$$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分段函数求值</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">1</span>:</span><br><span class="line">    y = <span class="number">3</span> * x - <span class="number">5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= -<span class="number">1</span>:</span><br><span class="line">    y = x + <span class="number">2</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    y = <span class="number">5</span> * x + <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;f(<span class="subst">&#123;x&#125;</span>) = <span class="subst">&#123;y&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>当然根据实际开发的需要，分支结构是可以嵌套的，例如判断是否通关以后还要根据你获得的宝物或者道具的数量对你的表现给出等级（比如点亮两颗或三颗星星），那么我们就需要在<code>if</code>的内部构造出一个新的分支结构，同理<code>elif</code>和<code>else</code>中也可以再构造新的分支，我们称之为嵌套的分支结构，也就是说上面的代码也可以写成下面的样子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">分段函数求值</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">x = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;x = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">1</span>:</span><br><span class="line">    y = <span class="number">3</span> * x - <span class="number">5</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> x &gt;= -<span class="number">1</span>:</span><br><span class="line">        y = x + <span class="number">2</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        y = <span class="number">5</span> * x + <span class="number">3</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;f(<span class="subst">&#123;x&#125;</span>) = <span class="subst">&#123;y&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明：</strong> 大家可以自己感受和评判一下这两种写法到底是哪一种更好。在<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/111843067"><strong>Python之禅</strong></a>中有这么一句话：“<strong>Flat is better than nested</strong>”，之所以提倡代码“扁平化”，是因为代码嵌套的层次如果很多，会严重的影响代码的可读性，所以使用更为扁平化的结构在很多场景下都是较好的选择。</p>
+</blockquote>
+<h3 id="一些例子"><a href="#一些例子" class="headerlink" title="一些例子"></a>一些例子</h3><h4 id="例子1：英制单位英寸与公制单位厘米互换。"><a href="#例子1：英制单位英寸与公制单位厘米互换。" class="headerlink" title="例子1：英制单位英寸与公制单位厘米互换。"></a>例子1：英制单位英寸与公制单位厘米互换。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">英制单位英寸和公制单位厘米互换</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">value = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入长度: &#x27;</span>))</span><br><span class="line">unit = <span class="built_in">input</span>(<span class="string">&#x27;请输入单位: &#x27;</span>)</span><br><span class="line"><span class="keyword">if</span> unit == <span class="string">&#x27;in&#x27;</span> <span class="keyword">or</span> unit == <span class="string">&#x27;英寸&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%f英寸 = %f厘米&#x27;</span> % (value, value * <span class="number">2.54</span>))</span><br><span class="line"><span class="keyword">elif</span> unit == <span class="string">&#x27;cm&#x27;</span> <span class="keyword">or</span> unit == <span class="string">&#x27;厘米&#x27;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;%f厘米 = %f英寸&#x27;</span> % (value, value / <span class="number">2.54</span>))</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;请输入有效的单位&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子2：百分制成绩转换为等级制成绩。"><a href="#例子2：百分制成绩转换为等级制成绩。" class="headerlink" title="例子2：百分制成绩转换为等级制成绩。"></a>例子2：百分制成绩转换为等级制成绩。</h4><blockquote>
+<p><strong>要求</strong>：如果输入的成绩在90分以上（含90分）输出A；80分-90分（不含90分）输出B；70分-80分（不含80分）输出C；60分-70分（不含70分）输出D；60分以下输出E。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">百分制成绩转换为等级制成绩</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">score = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入成绩: &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    grade = <span class="string">&#x27;A&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span>:</span><br><span class="line">    grade = <span class="string">&#x27;B&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">70</span>:</span><br><span class="line">    grade = <span class="string">&#x27;C&#x27;</span></span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">    grade = <span class="string">&#x27;D&#x27;</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    grade = <span class="string">&#x27;E&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;对应的等级是:&#x27;</span>, grade)</span><br></pre></td></tr></table></figure>
+<h4 id="例子3：输入三条边长，如果能构成三角形就计算周长和面积。"><a href="#例子3：输入三条边长，如果能构成三角形就计算周长和面积。" class="headerlink" title="例子3：输入三条边长，如果能构成三角形就计算周长和面积。"></a>例子3：输入三条边长，如果能构成三角形就计算周长和面积。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">判断输入的边长能否构成三角形，如果能则计算出三角形的周长和面积</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">a = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;a = &#x27;</span>))</span><br><span class="line">b = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;b = &#x27;</span>))</span><br><span class="line">c = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;c = &#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> a + b &gt; c <span class="keyword">and</span> a + c &gt; b <span class="keyword">and</span> b + c &gt; a:</span><br><span class="line">    peri = a + b + c</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;周长: <span class="subst">&#123;peri&#125;</span>&#x27;</span>)</span><br><span class="line">    half = peri / <span class="number">2</span></span><br><span class="line">    area = (half * (half - a) * (half - b) * (half - c)) ** <span class="number">0.5</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;面积: <span class="subst">&#123;area&#125;</span>&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;不能构成三角形&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>说明：</strong> 上面通过边长计算三角形面积的公式叫做<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hans/%E6%B5%B7%E4%BC%A6%E5%85%AC%E5%BC%8F">海伦公式</a>。</p>
+</blockquote>
+<h3 id="简单的总结"><a href="#简单的总结" class="headerlink" title="简单的总结"></a>简单的总结</h3><p>学会了Python中的分支结构和循环结构，我们就可以用Python程序来解决很多实际的问题了。这一节课相信已经帮助大家记住了<code>if</code>、<code>elif</code>、<code>else</code>这几个关键字以及如何使用它们来构造分支结构，下一节课我们为大家介绍循环结构，学完这两次课你一定会发现，你能写出很多很多非常有意思的代码。继续加油！</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第05课：分支结构/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC04%E8%AF%BE%EF%BC%9APython%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0%E4%B9%8B%E8%BF%90%E7%AE%97%E7%AC%A6/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.130Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第04课：Python语言元素之运算符Python语言支持很多种运算符，我们先用一个表格为大家列出这些运算符，然后选择一些马上就会用到的运算符为大家进行讲解。
+
+
+
+运算符
+描述
+
+
+
+[] [:]
+下标，切片
+
+
+**
+指数
+
+
+~ + -
+按位取反, 正负号
+
+
+* / % //
+乘，除，模，整除
+
+
++ -
+加，减
+
+
+&gt;&gt; &lt;&lt;
+右移，左移
+
+
+&amp;
+按位与
+
+
+^ |
+按位异或，按位或
+
+
+&lt;= &lt; &gt; &gt;=
+小于等于，小于，大于，大于等于
+
+
+== !=
+等于，不等于
+
+
+is  is not
+身份运算符
+
+
+in not in
+成员运算符
+
+
+not or and
+逻辑运算符
+
+
+= += -= *= /= %= //= **= &amp;= `
+= ^= &gt;&gt;= &lt;&lt;=`
+
+
+
+说明： 上面这个表格实际上是按照运算符的优先级从上到下列出了各种运算符。所谓优先级就是在一个运算的表达式中，如果出现了多个运算符，应该先执行哪个运算再执行哪个运算的顺序。在实际开发中，如果搞不清楚运算符的优先级，可以使 -->
+        <!-- </div> -->
+
+        
+        <h2 id="第04课：Python语言元素之运算符"><a href="#第04课：Python语言元素之运算符" class="headerlink" title="第04课：Python语言元素之运算符"></a>第04课：Python语言元素之运算符</h2><p>Python语言支持很多种运算符，我们先用一个表格为大家列出这些运算符，然后选择一些马上就会用到的运算符为大家进行讲解。</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[]</code> <code>[:]</code></td>
+<td>下标，切片</td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td>指数</td>
+</tr>
+<tr>
+<td><code>~</code> <code>+</code> <code>-</code></td>
+<td>按位取反, 正负号</td>
+</tr>
+<tr>
+<td><code>*</code> <code>/</code> <code>%</code> <code>//</code></td>
+<td>乘，除，模，整除</td>
+</tr>
+<tr>
+<td><code>+</code> <code>-</code></td>
+<td>加，减</td>
+</tr>
+<tr>
+<td><code>&gt;&gt;</code> <code>&lt;&lt;</code></td>
+<td>右移，左移</td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td>按位与</td>
+</tr>
+<tr>
+<td><code>^</code> <code>|</code></td>
+<td>按位异或，按位或</td>
+</tr>
+<tr>
+<td><code>&lt;=</code> <code>&lt;</code> <code>&gt;</code> <code>&gt;=</code></td>
+<td>小于等于，小于，大于，大于等于</td>
+</tr>
+<tr>
+<td><code>==</code> <code>!=</code></td>
+<td>等于，不等于</td>
+</tr>
+<tr>
+<td><code>is</code>  <code>is not</code></td>
+<td>身份运算符</td>
+</tr>
+<tr>
+<td><code>in</code> <code>not in</code></td>
+<td>成员运算符</td>
+</tr>
+<tr>
+<td><code>not</code> <code>or</code> <code>and</code></td>
+<td>逻辑运算符</td>
+</tr>
+<tr>
+<td><code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>//=</code> <code>**=</code> <code>&amp;=</code> `</td>
+<td>=<code> </code>^=<code> </code>&gt;&gt;=<code> </code>&lt;&lt;=`</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明：</strong> 上面这个表格实际上是按照运算符的优先级从上到下列出了各种运算符。所谓优先级就是在一个运算的表达式中，如果出现了多个运算符，应该先执行哪个运算再执行哪个运算的顺序。在实际开发中，如果搞不清楚运算符的优先级，可以使用圆括号来确保运算的执行顺序。</p>
+</blockquote>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>Python中的算术运算符非常丰富，除了大家最为熟悉的加减乘除之外，还有整除运算符、求模（求余数）运算符和求幂运算符。下面的例子为大家展示了算术运算符的使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">算术运算符</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> + <span class="number">123</span>)     <span class="comment"># 加法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> - <span class="number">123</span>)     <span class="comment"># 减法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> * <span class="number">123</span>)     <span class="comment"># 乘法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> / <span class="number">123</span>)     <span class="comment"># 除法运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> % <span class="number">123</span>)     <span class="comment"># 求模运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> // <span class="number">123</span>)    <span class="comment"># 整除运算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">321</span> ** <span class="number">123</span>)    <span class="comment"># 求幂运算</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>赋值运算符应该是最为常见的运算符，它的作用是将右边的值赋给左边的变量。下面的例子演示了赋值运算符和复合赋值运算符的使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">赋值运算符和复合赋值运算符</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line">b = <span class="number">3</span></span><br><span class="line">a += b        <span class="comment"># 相当于：a = a + b</span></span><br><span class="line">a *= a + <span class="number">2</span>    <span class="comment"># 相当于：a = a * (a + 2)</span></span><br><span class="line"><span class="built_in">print</span>(a)      <span class="comment"># 算一下这里会输出什么</span></span><br></pre></td></tr></table></figure>
+
+<p>###比较运算符和逻辑运算符</p>
+<p>比较运算符有的地方也称为关系运算符，包括<code>==</code>、<code>!=</code>、<code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>，我相信没有什么好解释的，大家一看就能懂，需要提醒的是比较相等用的是<code>==</code>，请注意这里是两个等号，因为<code>=</code>是赋值运算符，我们在上面刚刚讲到过，<code>==</code>才是比较相等的运算符；比较不相等用的是<code>!=</code>，这不同于数学上的不等号，Python 2中曾经使用过<code>&lt;&gt;</code>来表示不等关系，大家知道就可以了。比较运算符会产生布尔值，要么是<code>True</code>要么是<code>False</code>。</p>
+<p>逻辑运算符有三个，分别是<code>and</code>、<code>or</code>和<code>not</code>。<code>and</code>字面意思是“而且”，所以<code>and</code>运算符会连接两个布尔值，如果两个布尔值都是<code>True</code>，那么运算的结果就是<code>True</code>；左右两边的布尔值有一个是<code>False</code>，最终的运算结果就是<code>False</code>。相信大家已经想到了，如果<code>and</code>左边的布尔值是<code>False</code>，不管右边的布尔值是什么，最终的结果都是<code>False</code>，所以在做运算的时候右边的值会被跳过（短路处理），这也就意味着在<code>and</code>运算符左边为<code>False</code>的情况下，右边的表达式根本不会执行。<code>or</code>字面意思是“或者”，所以<code>or</code>运算符也会连接两个布尔值，如果两个布尔值有任意一个是<code>True</code>，那么最终的结果就是<code>True</code>。当然，<code>or</code>运算符也是有短路功能的，在它左边的布尔值为<code>True</code>的情况下，右边的表达式根本不会执行。<code>not</code>运算符的后面会跟上一个布尔值，它的作用是得到与该布尔值相反的值，也就是说，<code>not</code>后面的布尔值如果是<code>True</code>，运算结果就是<code>False</code>；而<code>not</code>后面的布尔值如果是<code>False</code>，运算结果就是<code>True</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">比较运算符和逻辑运算符的使用</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">flag0 = <span class="number">1</span> == <span class="number">1</span></span><br><span class="line">flag1 = <span class="number">3</span> &gt; <span class="number">2</span></span><br><span class="line">flag2 = <span class="number">2</span> &lt; <span class="number">1</span></span><br><span class="line">flag3 = flag1 <span class="keyword">and</span> flag2</span><br><span class="line">flag4 = flag1 <span class="keyword">or</span> flag2</span><br><span class="line">flag5 = <span class="keyword">not</span> (<span class="number">1</span> != <span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag0 =&#x27;</span>, flag0)    <span class="comment"># flag0 = True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag1 =&#x27;</span>, flag1)    <span class="comment"># flag1 = True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag2 =&#x27;</span>, flag2)    <span class="comment"># flag2 = False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag3 =&#x27;</span>, flag3)    <span class="comment"># flag3 = False</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag4 =&#x27;</span>, flag4)    <span class="comment"># flag4 = True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;flag5 =&#x27;</span>, flag5)    <span class="comment"># flag5 = False</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：比较运算符的优先级高于赋值运算符，所以<code>flag0 = 1 == 1</code>先做<code>1 == 1</code>产生布尔值<code>True</code>，再将这个值赋值给变量<code>flag0</code>。<code>print</code>函数可以输出多个值，多个值之间可以用<code>,</code>进行分隔，输出的内容之间默认以空格分开。</p>
+</blockquote>
+<h3 id="运算符的例子"><a href="#运算符的例子" class="headerlink" title="运算符的例子"></a>运算符的例子</h3><h4 id="例子1：华氏温度转换为摄氏温度。"><a href="#例子1：华氏温度转换为摄氏温度。" class="headerlink" title="例子1：华氏温度转换为摄氏温度。"></a>例子1：华氏温度转换为摄氏温度。</h4><blockquote>
+<p><strong>提示</strong>：华氏温度到摄氏温度的转换公式为：<code>C = (F - 32) / 1.8</code>。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">将华氏温度转换为摄氏温度</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">f = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入华氏温度: &#x27;</span>))</span><br><span class="line">c = (f - <span class="number">32</span>) / <span class="number">1.8</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;%.1f华氏度 = %.1f摄氏度&#x27;</span> % (f, c))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：在使用<code>print</code>函数输出时，也可以对字符串内容进行格式化处理，上面<code>print</code>函数中的字符串<code>%.1f</code>是一个占位符，稍后会由一个<code>float</code>类型的变量值替换掉它。同理，如果字符串中有<code>%d</code>，后面可以用一个<code>int</code>类型的变量值替换掉它，而<code>%s</code>会被字符串的值替换掉。除了这种格式化字符串的方式外，还可以用下面的方式来格式化字符串，其中<code>&#123;f:.1f&#125;</code>和<code>&#123;c:.1f&#125;</code>可以先看成是<code>&#123;f&#125;</code>和<code>&#123;c&#125;</code>，表示输出时会用变量<code>f</code>和变量<code>c</code>的值替换掉这两个占位符，后面的<code>:.1f</code>表示这是一个浮点数，小数点后保留1位有效数字。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;f:<span class="number">.1</span>f&#125;</span>华氏度 = <span class="subst">&#123;c:<span class="number">.1</span>f&#125;</span>摄氏度&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="例子2：输入圆的半径计算计算周长和面积。"><a href="#例子2：输入圆的半径计算计算周长和面积。" class="headerlink" title="例子2：输入圆的半径计算计算周长和面积。"></a>例子2：输入圆的半径计算计算周长和面积。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输入半径计算圆的周长和面积</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">radius = <span class="built_in">float</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入圆的半径: &#x27;</span>))</span><br><span class="line">perimeter = <span class="number">2</span> * <span class="number">3.1416</span> * radius</span><br><span class="line">area = <span class="number">3.1416</span> * radius * radius</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;周长: %.2f&#x27;</span> % perimeter)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;面积: %.2f&#x27;</span> % area)</span><br></pre></td></tr></table></figure>
+
+<h4 id="例子3：输入年份判断是不是闰年。"><a href="#例子3：输入年份判断是不是闰年。" class="headerlink" title="例子3：输入年份判断是不是闰年。"></a>例子3：输入年份判断是不是闰年。</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">输入年份 如果是闰年输出True 否则输出False</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">year = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入年份: &#x27;</span>))</span><br><span class="line">is_leap = year % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> year % <span class="number">100</span> != <span class="number">0</span> <span class="keyword">or</span> year % <span class="number">400</span> == <span class="number">0</span></span><br><span class="line"><span class="built_in">print</span>(is_leap)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：比较运算符会产生布尔值，而逻辑运算符<code>and</code>和<code>or</code>会对这些布尔值进行组合，最终也是得到一个布尔值，闰年输出<code>True</code>，平年输出<code>False</code>。</p>
+</blockquote>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过上面的例子相信大家感受到了，学会使用运算符以及由运算符构成的表达式，就可以帮助我们解决很多实际的问题，<strong>运算符和表达式对于任何一门编程语言都是非常重要的</strong>。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第04课：Python语言元素之运算符/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC03%E8%AF%BE%EF%BC%9APython%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0%E4%B9%8B%E5%8F%98%E9%87%8F/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.121Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第03课：Python语言元素之变量作为一个程序员，可能经常会被外行问到两个问题，其一是“什么是（计算机）程序”，其二是“写（计算机）程序能做什么”，这里我先对这两个问题做一个回答。程序是指令的集合，写程序就是用指令控制计算机做我们想让它做的事情。那么，为什么要用Python语言来写程序呢？因为Python语言简单优雅，相比C、C++、Java这样的编程语言，Python对初学者更加友好，当然这并不是说Python不像其他语言那样强大，Python几乎是无所不能的，在第一节课的时候，我们就说到了Python可以用于服务器程序开发、云平台开发、数据分析、机器学习等各个领域。当然，Python语言还可以用来粘合其他语言开发的系统，所以也经常被戏称为“胶水语言”。
+一些计算机常识在开始系统的学习编程之前，我们先来科普一些计算机的基础知识。计算机的硬件系统通常由五大部件构成，包括：运算器、控制器、存储器、输入设备和输出设备。其中，运算器和控制器放在一起就是我们常说的中央处理器，它的功能是执行各种运算和控制指令。刚才我们提到过程序是指令的集合，写程序就是将一系列的指令按照某种方式组织到一起，然后 -->
+        <!-- </div> -->
+
+        
+        <h2 id="第03课：Python语言元素之变量"><a href="#第03课：Python语言元素之变量" class="headerlink" title="第03课：Python语言元素之变量"></a>第03课：Python语言元素之变量</h2><p>作为一个程序员，可能经常会被外行问到两个问题，其一是“什么是（计算机）程序”，其二是“写（计算机）程序能做什么”，这里我先对这两个问题做一个回答。<strong>程序是指令的集合</strong>，<strong>写程序就是用指令控制计算机做我们想让它做的事情</strong>。那么，为什么要用Python语言来写程序呢？因为<strong>Python语言简单优雅</strong>，相比C、C++、Java这样的编程语言，<strong>Python对初学者更加友好</strong>，当然这并不是说Python不像其他语言那样强大，<strong>Python几乎是无所不能的</strong>，在第一节课的时候，我们就说到了Python可以用于服务器程序开发、云平台开发、数据分析、机器学习等各个领域。当然，Python语言还可以用来粘合其他语言开发的系统，所以也经常被戏称为“<strong>胶水语言</strong>”。</p>
+<h3 id="一些计算机常识"><a href="#一些计算机常识" class="headerlink" title="一些计算机常识"></a>一些计算机常识</h3><p>在开始系统的学习编程之前，我们先来科普一些计算机的基础知识。计算机的硬件系统通常由五大部件构成，包括：<strong>运算器</strong>、<strong>控制器</strong>、<strong>存储器</strong>、<strong>输入设备</strong>和<strong>输出设备</strong>。其中，运算器和控制器放在一起就是我们常说的<strong>中央处理器</strong>，它的功能是执行各种运算和控制指令。刚才我们提到过程序是指令的集合，写程序就是将一系列的指令按照某种方式组织到一起，然后通过这些指令去控制计算机做我们想让它做的事情。目前，我们使用的计算机基本都是“冯·诺依曼体系结构”的计算机，这种计算机有两个关键点：一是要将<strong>存储设备与中央处理器分开</strong>；二是将<strong>数据以二进制方式编码</strong>。</p>
+<p>二进制是一种“逢二进一”的计数法，跟我们人类使用的“逢十进一”的计数法本质是一样的。人类因为有十根手指所以使用了十进制，因为在计数时十根手指用完之后就只能用进位的方式来表示更大的数值。当然凡事都有例外，玛雅人可能是因为长年光着脚的原因，把脚趾头也都用上了，于是他们使用了二十进制的计数法。在这种计数法的指导下，玛雅人的历法就与我们平常使用的历法并不相同。按照玛雅人的历法，2012年是上一个所谓的“太阳纪”的最后一年，而2013年则是新的“太阳纪”的开始，后来这件事情被以讹传讹的方式误传为”2012年是玛雅人预言的世界末日“的荒诞说法。今天很多人都在猜测，玛雅文明之所以发展缓慢跟使用了二十进制是有关系的。对于计算机来说，二进制在物理器件上最容易实现的，因为可以用高电压表示1，用低电压表示0。不是所有写程序的人都需要知道十进制与二进制如何转换，大多数时候我们即便不了解这些知识也能写出程序，但是我们必须要知道<strong>计算机是使用二进制计数的</strong>，不管什么<strong>数据到了计算机内存中都是以二进制形式存在的</strong>。</p>
+<h3 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h3><p>要想在计算机内存中保存数据，首先就得说一说变量这个概念。在编程语言中，<strong>变量是数据的载体</strong>，简单的说就是一块用来保存数据的内存空间，<strong>变量的值可以被读取和修改</strong>，这是所有计算和控制的基础。计算机能处理的数据有很多种类型，最常见的就是数值，除了数值之外还有文本、图形、音频、视频等各种各样的数据。虽然数据在计算机中都是以二进制形态存在的，但是我们可以用不同类型的变量来表示数据类型的差异。<strong>Python中的数据类型很多</strong>，而且也<strong>允许我们自定义新的数据类型</strong>（这一点在后面会讲到），这里我们需要先了解几种常用的数据类型。</p>
+<ul>
+<li>整型（<code>int</code>）：Python中可以处理任意大小的整数，而且支持二进制（如<code>0b100</code>，换算成十进制是4）、八进制（如<code>0o100</code>，换算成十进制是64）、十进制（<code>100</code>）和十六进制（<code>0x100</code>，换算成十进制是256）的表示法。</li>
+<li>浮点型（<code>float</code>）：浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，浮点数除了数学写法（如<code>123.456</code>）之外还支持科学计数法（如<code>1.23456e2</code>）。</li>
+<li>字符串型（<code>str</code>）：字符串是以单引号或双引号括起来的任意文本，比如<code>&#39;hello&#39;</code>和<code>&quot;hello&quot;</code>。</li>
+<li>布尔型（<code>bool</code>）：布尔值只有<code>True</code>、<code>False</code>两种值，要么是<code>True</code>，要么是<code>False</code>。</li>
+</ul>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><p>对于每个变量我们需要给它取一个名字，就如同我们每个人都有自己的名字一样。在Python中，变量命名需要遵循以下这些规则，这些规则又分为必须遵守的硬性规则和建议遵守的非硬性规则。</p>
+<ul>
+<li>硬性规则：<ul>
+<li>规则1：变量名由<strong>字母</strong>、数字和<strong>下划线</strong>构成，数字不能开头。需要说明的是，这里说的字母指的是Unicode字符，Unicode称为万国码，囊括了世界上大部分的文字系统，这也就意味着中文、日文、希腊字母等都可以作为变量名中的字符，但是像<code>!</code>、<code>@</code>、<code>#</code>这些特殊字符是不能出现在变量名中的，而且我们强烈建议大家<strong>尽可能使用英文字母</strong>。</li>
+<li>规则2：<strong>大小写敏感</strong>，简单的说就是大写的<code>A</code>和小写的<code>a</code>是两个不同的变量。</li>
+<li>规则3：变量名<strong>不要跟Python语言的关键字</strong>（有特殊含义的单词，后面会讲到）和<strong>保留字</strong>（如已有的函数、模块等的名字）<strong>发生重名的冲突</strong>。</li>
+</ul>
+</li>
+<li>非硬性规则：<ul>
+<li>规则1：变量名通常使用小写英文字母，多个单词用下划线进行连接。</li>
+<li>规则2：受保护的变量用单个下划线开头。</li>
+<li>规则3：私有的变量用两个下划线开头。</li>
+</ul>
+</li>
+</ul>
+<p>规则2和规则3大家暂时不用理解，后面自然会明白的。当然，作为一个专业的程序员，给变量（事实上应该是所有的标识符）命名时做到<strong>见名知意</strong>也非常重要。</p>
+<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><p>下面通过例子来说明变量的类型和变量的使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">使用变量保存数据并进行加减乘除运算</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">a = <span class="number">45</span>          <span class="comment"># 变量a保存了45</span></span><br><span class="line">b = <span class="number">12</span>          <span class="comment"># 变量b保存了12</span></span><br><span class="line"><span class="built_in">print</span>(a + b)    <span class="comment"># 57</span></span><br><span class="line"><span class="built_in">print</span>(a - b)    <span class="comment"># 33</span></span><br><span class="line"><span class="built_in">print</span>(a * b)    <span class="comment"># 540</span></span><br><span class="line"><span class="built_in">print</span>(a / b)    <span class="comment"># 3.75</span></span><br></pre></td></tr></table></figure>
+
+<p>在Python中可以使用<code>type</code>函数对变量的类型进行检查。程序设计中函数的概念跟数学上函数的概念基本一致，数学上的函数相信大家并不陌生，它包括了函数名、自变量和因变量。如果暂时不理解函数这个概念也不要紧，我们会在后续的内容中专门讲解函数的定义和使用。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">使用type()检查变量的类型</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line">b = <span class="number">12.345</span></span><br><span class="line">c = <span class="string">&#x27;hello, world&#x27;</span></span><br><span class="line">d = <span class="literal">True</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))    <span class="comment"># &lt;class &#x27;int&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))    <span class="comment"># &lt;class &#x27;float&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(c))    <span class="comment"># &lt;class &#x27;str&#x27;&gt;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(d))    <span class="comment"># &lt;class &#x27;bool&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>不同类型的变量可以相互转换，这一点可以通过Python的内置函数来实现。</p>
+<ul>
+<li><code>int()</code>：将一个数值或字符串转换成整数，可以指定进制。</li>
+<li><code>float()</code>：将一个字符串转换成浮点数。</li>
+<li><code>str()</code>：将指定的对象转换成字符串形式，可以指定编码。</li>
+<li><code>chr()</code>：将整数转换成该编码对应的字符串（一个字符）。</li>
+<li><code>ord()</code>：将字符串（一个字符）转换成对应的编码（整数）。</li>
+</ul>
+<p>下面的例子为大家演示了Python中类型转换的操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">Python中的类型转换操作</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line">a = <span class="number">100</span></span><br><span class="line">b = <span class="number">12.345</span></span><br><span class="line">c = <span class="string">&#x27;hello, world&#x27;</span></span><br><span class="line">d = <span class="literal">True</span></span><br><span class="line"><span class="comment"># 整数转成浮点数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">float</span>(a))    <span class="comment"># 100.0</span></span><br><span class="line"><span class="comment"># 浮点型转成字符串 (输出字符串时不会看到引号哟)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">str</span>(b))      <span class="comment"># 12.345</span></span><br><span class="line"><span class="comment"># 字符串转成布尔型 (有内容的字符串都会变成True)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">bool</span>(c))     <span class="comment"># True</span></span><br><span class="line"><span class="comment"># 布尔型转成整数 (True会转成1，False会转成0)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">int</span>(d))      <span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 将整数变成对应的字符 (97刚好对应字符表中的字母a)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">chr</span>(<span class="number">97</span>))     <span class="comment"># a</span></span><br><span class="line"><span class="comment"># 将字符转成整数 (Python中字符和字符串表示法相同)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">ord</span>(<span class="string">&#x27;a&#x27;</span>))    <span class="comment"># 97</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在Python程序中，我们可以<strong>使用变量来保存数据</strong>，<strong>变量有不同的类型</strong>，<strong>变量可以做运算</strong>（下一课会有详细的讲解），<strong>也可以通过内置函数来转换变量类型</strong>。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第03课：Python语言元素之变量/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC02%E8%AF%BE%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AAPython%E7%A8%8B%E5%BA%8F/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.107Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第02课：第一个Python程序在上一课中，我们已经了解了Python语言并安装了运行Python程序所需的环境，相信大家已经迫不及待的想开始自己的Python编程之旅了。首先我们来看看应该在哪里编写我们的Python程序。
+编写代码的工具交互式环境我们打开Windows的“命令提示符”工具，输入命令python然后回车就可以进入到Python的交互式环境中。所谓交互式环境，就是我们输入一行代码回车，代码马上会被执行，如果代码有产出结果，那么结果会被显示在窗口中。例如：
+123456Python 3.7.6Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.&gt;&gt;&gt; 2 * 36&gt;&gt;&gt; 2 + 35
+
+
+提示：使用macOS系统的用户需要打开“终端”工具，输入python3进入交互式环境。
+
+如果希望退出交互式环境，可以在交互式环境中输入quit()，如下所示。
+1&gt;&gt;&gt -->
+        <!-- </div> -->
+
+        
+        <h2 id="第02课：第一个Python程序"><a href="#第02课：第一个Python程序" class="headerlink" title="第02课：第一个Python程序"></a>第02课：第一个Python程序</h2><p>在上一课中，我们已经了解了Python语言并安装了运行Python程序所需的环境，相信大家已经迫不及待的想开始自己的Python编程之旅了。首先我们来看看应该在哪里编写我们的Python程序。</p>
+<h3 id="编写代码的工具"><a href="#编写代码的工具" class="headerlink" title="编写代码的工具"></a>编写代码的工具</h3><h4 id="交互式环境"><a href="#交互式环境" class="headerlink" title="交互式环境"></a>交互式环境</h4><p>我们打开Windows的“命令提示符”工具，输入命令<code>python</code>然后回车就可以进入到Python的交互式环境中。所谓交互式环境，就是我们输入一行代码回车，代码马上会被执行，如果代码有产出结果，那么结果会被显示在窗口中。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Python 3.7.6</span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> or <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br><span class="line">&gt;&gt;&gt; 2 * 3</span><br><span class="line">6</span><br><span class="line">&gt;&gt;&gt; 2 + 3</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：使用macOS系统的用户需要打开“终端”工具，输入<code>python3</code>进入交互式环境。</p>
+</blockquote>
+<p>如果希望退出交互式环境，可以在交互式环境中输入<code>quit()</code>，如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; quit()</span><br></pre></td></tr></table></figure>
+
+<h4 id="更好的交互式环境-IPython"><a href="#更好的交互式环境-IPython" class="headerlink" title="更好的交互式环境 - IPython"></a>更好的交互式环境 - IPython</h4><p>Python默认的交互式环境用户体验并不怎么好，我们可以用IPython来替换掉它，因为IPython提供了更为强大的编辑和交互功能。我们可以使用Python的包管理工具<code>pip</code>来安装IPython，如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install ipython</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>温馨提示</strong>：在使用上面的命令安装IPython之前，可以先通过<code>pip config set global.index-url https://pypi.doubanio.com/simple</code>命令将<code>pip</code>的下载源修改为国内的豆瓣网，否则下载安装的过程可能会非常的缓慢。</p>
+</blockquote>
+<p>可以使用下面的命令启动IPython，进入交互式环境。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ipython</span><br></pre></td></tr></table></figure>
+
+<h4 id="文本编辑器-Visual-Studio-Code"><a href="#文本编辑器-Visual-Studio-Code" class="headerlink" title="文本编辑器 - Visual Studio Code"></a>文本编辑器 - Visual Studio Code</h4><p>Visual Studio Code（通常简称为VSCode）是一个由微软开发能够在Windows、 Linux和macOS等操作系统上运行的代码编辑神器。它支持语法高亮、自动补全、多点编辑、运行调试等一系列便捷功能，而且能够支持多种编程语言。如果大家要选择一款高级文本编辑工具，强烈建议使用VSCode。关于VSCode的<a target="_blank" rel="noopener" href="https://code.visualstudio.com/">下载</a>、安装和使用，推荐大家阅读一篇名为<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/106357123">《VScode安装使用》</a>的文章。</p>
+<h4 id="集成开发环境-PyCharm"><a href="#集成开发环境-PyCharm" class="headerlink" title="集成开发环境 - PyCharm"></a>集成开发环境 - PyCharm</h4><p>如果用Python开发商业项目，我们推荐大家使用更为专业的工具PyCharm。PyCharm是由捷克一家名为<a target="_blank" rel="noopener" href="https://www.jetbrains.com/">JetBrains</a>的公司开发的用于Python项目开发的集成开发环境（IDE)。所谓集成开发环境，通常是指工具中提供了编写代码、运行代码、调试代码、分析代码、版本控制等一系列功能，因此特别适合商业项目的开发。在JetBrains的官方网站上提供了PyCharm的<a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/download">下载链接</a>，其中社区版（Community）是免费的但功能相对弱小（其实已经足够强大了），专业版（Professional）功能非常强大，但需要按年或月付费使用，新用户可以试用30天时间。</p>
+<p>运行PyCharm，可以看到如下图所示的欢迎界面，可以选择“New Project”来创建一个新的项目。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210720102203.png" width="80%">
+
+<p>创建项目的时候需要指定项目的路径并创建运行项目的”虚拟环境“，如下图所示。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210720102822.png" width="80%">
+
+<p>项目创建好以后会出现如下图所示的画面，我们可以通过在项目文件夹上点击鼠标右键，选择“New”菜单下的“Python File”来创建一个Python文件，创建好的Python文件会自动打开进入可编辑的状态。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210720133621.png" alt="image-20210720133621079"></p>
+<p>写好代码后，可以在编辑代码的窗口点击鼠标右键，选择“Run”菜单项来运行代码，下面的“Run”窗口会显示代码的执行结果，如下图所示。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210720134039.png" alt="image-20210720134039848"></p>
+<p>PyCharm常用的快捷键如下表所示，我们也可以在“File”菜单的“Settings”中定制PyCharm的快捷键（macOS系统是在“PyCharm”菜单的“Preferences”中对快捷键进行设置）。</p>
+<p>表1. PyCharm常用快捷键。</p>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ctrl + j</code></td>
+<td>显示可用的代码模板</td>
+</tr>
+<tr>
+<td><code>ctrl + b</code></td>
+<td>查看函数、类、方法的定义</td>
+</tr>
+<tr>
+<td><code>ctrl + alt + l</code></td>
+<td>格式化代码</td>
+</tr>
+<tr>
+<td><code>alt + enter</code></td>
+<td>万能代码修复快捷键</td>
+</tr>
+<tr>
+<td><code>ctrl + /</code></td>
+<td>注释/反注释代码</td>
+</tr>
+<tr>
+<td><code>shift + shift</code></td>
+<td>万能搜索快捷键</td>
+</tr>
+<tr>
+<td><code>ctrl + d</code> / <code>ctrl + y</code></td>
+<td>复制/删除一行代码</td>
+</tr>
+<tr>
+<td><code>ctrl + shift + -</code> / <code>ctrl + shift + +</code></td>
+<td>折叠/展开所有代码</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>快速定位到错误代码</td>
+</tr>
+<tr>
+<td><code>ctrl + alt + F7</code></td>
+<td>查看哪些地方用到了指定的函数、类、方法</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明</strong>：使用macOS系统，可以将上面的<code>ctrl</code>键换成<code>command</code>键，在macOS系统上，可以使用<code>ctrl + space</code>组合键来获得万能提示，在Windows系统上不能使用该快捷键，因为它跟Windows默认的切换输入法的快捷键是冲突的，需要重新设置。</p>
+</blockquote>
+<h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello, world"></a>hello, world</h3><p>按照行业惯例，我们学习任何一门编程语言写的第一个程序都是输出<code>hello, world</code>，因为这段代码是伟大的丹尼斯·里奇（C语言之父，和肯·汤普森一起开发了Unix操作系统）和布莱恩·柯尼汉（awk语言的发明者）在他们的不朽著作<em>The C Programming Language</em>中写的第一段代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello, world&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行程序"><a href="#运行程序" class="headerlink" title="运行程序"></a>运行程序</h3><p>如果不使用PyCharm这样的集成开发环境，我们可以将上面的代码命名为<code>hello.py</code>，对于Windows操作系统，可以在你保存代码的目录下先按住键盘上的<code>shift</code>键再点击鼠标右键，这时候鼠标右键菜单中会出现“命令提示符”选项，点击该选项就可以打开“命令提示符”工具，我们输入下面的命令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python hello.py</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提醒</strong>：我们也可以在任意位置打开“命令提示符”，然后将需要执行的Python代码通过拖拽的方式拖入到“命令提示符”中，这样相当于指定了文件的绝对路径来运行该文件中的Python代码。再次提醒，macOS系统要通过<code>python3</code>命令来运行该程序。</p>
+</blockquote>
+<p>你可以尝试将上面程序单引号中的<code>hello, world</code>换成其他内容；你也可以尝试着多写几个这样的语句，看看会运行出怎样的结果。需要提醒大家，上面代码中的<code>print(&#39;hello, world&#39;)</code>就是一条完整的语句，我们用Python写程序，最好每一行代码中只有一条语句。虽然使用<code>;</code>分隔符可以将多个语句写在一行代码中，但是最好不要这样做，因为代码会变得非常难看。</p>
+<h3 id="注释你的代码"><a href="#注释你的代码" class="headerlink" title="注释你的代码"></a>注释你的代码</h3><p>注释是编程语言的一个重要组成部分，用于在源代码中解释代码的作用从而增强程序的可读性。当然，我们也可以将源代码中暂时不需要运行的代码段通过注释来去掉，这样当你需要重新使用这些代码的时候，去掉注释符号就可以了。简单的说，<strong>注释会让代码更容易看懂但不会影响程序的执行结果</strong>。</p>
+<p>Python中有两种形式的注释：</p>
+<ol>
+<li>单行注释：以<code>#</code>和空格开头，可以注释掉从<code>#</code>开始后面一整行的内容。</li>
+<li>多行注释：三个引号开头，三个引号结尾，通常用于添加多行说明性内容。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">第一个Python程序 - hello, world</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Version: 0.1</span></span><br><span class="line"><span class="string">Author: 骆昊</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="comment"># print(&#x27;hello, world&#x27;)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;你好，世界！&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>到这里，我们已经把第一个Python程序运行起来了，是不是很有成就感？只要你坚持学习下去，再过一段时间，我们就可以用Python制作小游戏、编写爬虫程序、完成办公自动化操作等。<strong>写程序本身就是一件很酷的事情</strong>，在未来编程就像英语一样，<strong>对很多人来说或都是必须要掌握的技能</strong>。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第02课：第一个Python程序/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/%E7%AC%AC01%E8%AF%BE%EF%BC%9A%E5%88%9D%E8%AF%86Python/" class="item-title"></a>
+      
+      <time datetime="2021-09-12T12:55:47.098Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- 第01课：初识PythonPython简介Python是由荷兰人吉多·范罗苏姆（Guido von Rossum）发明的一种编程语言，是目前世界上最受欢迎和拥有最多用户群体的编程语言。
+
+
+Python的历史
+1989年圣诞节：Guido开始写Python语言的编译器。
+1991年2月：第一个Python解释器诞生，它是用C语言实现的，可以调用C语言的库函数。
+1994年1月：Python 1.0正式发布。
+2000年10月：Python 2.0发布，Python的整个开发过程更加透明，生态圈开始慢慢形成。
+2008年12月：Python 3.0发布，引入了诸多现代编程语言的新特性，但并不完全兼容之前的Python代码。
+2020年1月：在Python 2和Python 3共存了11年之后，官方停止了对Python 2的更新和维护，希望用户尽快过渡到Python 3。
+
+
+说明：大多数软件的版本号一般分为三段，形如A.B.C，其中A表示大版本号，当软件整体重写升级或出现不向后兼容的改变时，才会增加A；B表示功能更新，出现新功能时增加B；C表示小的改动（例如：修复了某个Bug），只要有修 -->
+        <!-- </div> -->
+
+        
+        <h2 id="第01课：初识Python"><a href="#第01课：初识Python" class="headerlink" title="第01课：初识Python"></a>第01课：初识Python</h2><h3 id="Python简介"><a href="#Python简介" class="headerlink" title="Python简介"></a>Python简介</h3><p>Python是由荷兰人吉多·范罗苏姆（Guido von Rossum）发明的一种编程语言，是目前世界上最受欢迎和拥有最多用户群体的编程语言。</p>
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20210816232538.png" width="85%">
+
+<h4 id="Python的历史"><a href="#Python的历史" class="headerlink" title="Python的历史"></a>Python的历史</h4><ol>
+<li>1989年圣诞节：Guido开始写Python语言的编译器。</li>
+<li>1991年2月：第一个Python解释器诞生，它是用C语言实现的，可以调用C语言的库函数。</li>
+<li>1994年1月：Python 1.0正式发布。</li>
+<li>2000年10月：Python 2.0发布，Python的整个开发过程更加透明，生态圈开始慢慢形成。</li>
+<li>2008年12月：Python 3.0发布，引入了诸多现代编程语言的新特性，但并不完全兼容之前的Python代码。</li>
+<li>2020年1月：在Python 2和Python 3共存了11年之后，官方停止了对Python 2的更新和维护，希望用户尽快过渡到Python 3。</li>
+</ol>
+<blockquote>
+<p><strong>说明</strong>：大多数软件的版本号一般分为三段，形如A.B.C，其中A表示大版本号，当软件整体重写升级或出现不向后兼容的改变时，才会增加A；B表示功能更新，出现新功能时增加B；C表示小的改动（例如：修复了某个Bug），只要有修改就增加C。</p>
+</blockquote>
+<h4 id="Python的优缺点"><a href="#Python的优缺点" class="headerlink" title="Python的优缺点"></a>Python的优缺点</h4><p>Python的优点很多，简单为大家列出几点。</p>
+<ol>
+<li>简单明确，跟其他很多语言相比，Python更容易上手。</li>
+<li>能用更少的代码做更多的事情，提升开发效率。</li>
+<li>开放源代码，拥有强大的社区和生态圈。</li>
+<li>能够做的事情非常多，有极强的适应性。</li>
+<li>能够在Windows、macOS、Linux等各种系统上运行。</li>
+</ol>
+<p>Python最主要的缺点是执行效率低，但是当我们更看重产品的开发效率而不是执行效率的时候，Python就是很好的选择。</p>
+<h4 id="Python的应用领域"><a href="#Python的应用领域" class="headerlink" title="Python的应用领域"></a>Python的应用领域</h4><p>目前Python在Web服务器应用开发、云基础设施开发、<strong>网络数据采集</strong>（爬虫）、<strong>数据分析</strong>、量化交易、<strong>机器学习</strong>、<strong>深度学习</strong>、自动化测试、自动化运维等领域都有用武之地。</p>
+<h3 id="安装Python环境"><a href="#安装Python环境" class="headerlink" title="安装Python环境"></a>安装Python环境</h3><p>想要开始你的Python编程之旅，首先得在计算机上安装Python环境，简单的说就是得安装运行Python程序的工具，通常也称之为Python解释器。我们强烈建议大家安装Python 3的环境，很明显它是目前更好的选择。</p>
+<h4 id="Windows环境"><a href="#Windows环境" class="headerlink" title="Windows环境"></a>Windows环境</h4><p>可以在<a target="_blank" rel="noopener" href="https://www.python.org/downloads/">Python官方网站</a>找到下载链接并下载Python 3的安装程序。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719222940.png"></p>
+<p>对于Windows操作系统，可以下载“executable installer”。需要注意的是，如果在Windows 7环境下安装Python 3，需要先安装Service Pack 1补丁包，大家可以在Windows的“运行”中输入<code>winver</code>命令，从弹出的窗口上可以看到你的系统是否安装了该补丁包。如果没有该补丁包，一定要先通过“Windows Update”或者类似“CCleaner”这样的工具自动安装该补丁包，安装完成后通常需要重启你的Windows系统，然后再开始安装Python环境。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719222956.png"></p>
+<p>双击运行刚才下载的安装程序，会打开Python环境的安装向导。在执行安装向导的时候，记得勾选“Add Python 3.x to PATH”选项，这个选项会帮助我们将Python的解释器添加到PATH环境变量中（不理解没关系，照做就行），具体的步骤如下图所示。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719223007.png"></p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719223021.png"></p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719223317.png"></p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719223332.png"></p>
+<p>安装完成后可以打开Windows的“命令行提示符”工具（或“PowerShell”）并输入<code>python --version</code>或<code>python -V</code>来检查安装是否成功，命令行提示符可以在“运行”中输入<code>cmd</code>来打开或者在“开始菜单”的附件中找到它。如果看了Python解释器对应的版本号（如：Python 3.7.8），说明你的安装已经成功了，如下图所示。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210719223350.png"></p>
+<blockquote>
+<p><strong>说明</strong>：如果安装过程显示安装失败或执行上面的命令报错，很有可能是因为你的Windows系统缺失了一些动态链接库文件或C构建工具导致的问题。可以在<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/download/details.aspx?id=48145">微软官网</a>下载Visual C++ Redistributable for Visual Studio 2015文件进行修复，64位的系统需要下载有x64标记的安装文件。也可以通过下面的百度云盘地址获取修复工具，运行修复工具，按照如下图所示的方式进行修复，链接: <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1iNDnU5UVdDX5sKFqsiDg5Q">https://pan.baidu.com/s/1iNDnU5UVdDX5sKFqsiDg5Q</a> 提取码: cjs3。</p>
+<p><img src="https://gitee.com/jackfrued/mypic/raw/master/20210816234614.png" alt="QQ20210711-0"></p>
+</blockquote>
+<p>除此之外，你还应该检查一下Python的包管理工具是否已经可用，对应的命令是<code>pip --version</code>。</p>
+<h4 id="macOS环境"><a href="#macOS环境" class="headerlink" title="macOS环境"></a>macOS环境</h4><p>macOS自带了Python 2，但是我们需要安装和使用的是Python 3。可以通过Python官方网站提供的<a target="_blank" rel="noopener" href="https://www.python.org/downloads/release/python-376/">下载链接</a>找到适合macOS的“macOS installer”来安装Python 3，安装过程基本不需要做任何勾选，直接点击“下一步”即可。安装完成后，可以在macOS的“终端”工具中输入<code>python3</code>命令来调用Python 3解释器，因为如果直接输入<code>python</code>，将会调用Python 2的解释器。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Python语言可以做很多的事情，也值得我们去学习。要使用Python语言，首先需要在自己的计算机上安装Python环境，也就是运行Python程序的Python解释器。</p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/第01课：初识Python/"> Read more -->
+          </span>
+        </div>
+
+        
+    
+    <div class="recent-post-item">
+
+      <a href="/2021/09/12/hello-world/" class="item-title">Hello World</a>
+      
+      <time datetime="2021-09-12T09:30:48.004Z">
+        2021-09-12
+      </time>
+      
+      <!-- <div class="article-digest"> -->
+        <!-- Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+
+More info: Writing
+Run server1$ hexo server
+
+More info: Server
+Generate static files1$ hexo generate
+
+More info: Generating
+Deploy to remote sites1$ hexo deploy
+
+More info: Deployment
+ -->
+        <!-- </div> -->
+
+        
+        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+        
+
+
+        <span>
+          <a class="article-read" href="/2021/09/12/hello-world/"> Read more -->
+          </span>
+        </div>
+
+        
+      </div>
+      
+
+
+      <div id="recent-posts-paginator">
+        <a class="extend prev" rel="prev" href="/page/2/"> </a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      </div>
+
+    </div>
+
+<aside id="sidebar">
+  
+  <div class="widget-box">
+  	  <div class="widget-box">
+    <h3 class="widget-title-friends">friends</h3>
+    <div class="widget">
+      
+        <a class="friends-list-link" style="display: block;" href="https://fireworks99.github.io/" title target='_blank'
+        >fireworks99</a>
+      
+    </div>
+  </div>
+
+  </div>
+  
+  <div class="widget-box">
+  	
+
+  </div>
+  
+  <div class="widget-box">
+  	
+
+  </div>
+  
+  <div class="widget-box">
+  	
+  </div>
+  
+  <div class="widget-box">
+  	
+  <div class="widget-box">
+    <h3 class="widget-title-archive">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li></ul>
+    </div>
+  </div>
+
+  </div>
+  
+  <div class="widget-box">
+  	
+  <div class="widget-box">
+    <h3 class="widget-title-post">recent_posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a class="recent_posts-list-link" href="/2021/09/12/%E7%AC%AC30%E8%AF%BE%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%BA%94%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a class="recent_posts-list-link" href="/2021/09/12/%E7%AC%AC29%E8%AF%BE%EF%BC%9A%E7%94%A8Python%E5%8F%91%E9%80%81%E9%82%AE%E4%BB%B6%E5%92%8C%E7%9F%AD%E4%BF%A1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a class="recent_posts-list-link" href="/2021/09/12/%E7%AC%AC28%E8%AF%BE%EF%BC%9A%E7%94%A8Python%E5%A4%84%E7%90%86%E5%9B%BE%E5%83%8F/">(no title)</a>
+          </li>
+        
+          <li>
+            <a class="recent_posts-list-link" href="/2021/09/12/%E7%AC%AC27%E8%AF%BE%EF%BC%9A%E7%94%A8Python%E6%93%8D%E4%BD%9CPDF%E6%96%87%E4%BB%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a class="recent_posts-list-link" href="/2021/09/12/%E7%AC%AC26%E8%AF%BE%EF%BC%9A%E7%94%A8Python%E6%93%8D%E4%BD%9CWord%E6%96%87%E4%BB%B6%E5%92%8CPowerPoint/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  </div>
+  
+</aside>
+
+<!-- <div id="paginator"> -->
+<!--   <a class="extend prev" rel="prev" href="/page/2/"> </a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span> -->
+<!-- </div> -->
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+            tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+          });
+      </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+              var all = MathJax.Hub.getAllJax(), i;
+              for(i=0; i < all.length; i += 1) {
+                  all[i].SourceElement().parentNode.className += ' has-jax';
+              }
+          });
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+			</div>
+		</div>
+
+		<div id="bottom-outer">
+			<div id="bottom-inner">
+				Site by 田裕平 | 
+				Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a> |
+				theme <a target="_blank" rel="noopener" href="https://github.com/fireworks99/hexo-theme-PreciousJoy">PreciousJoy</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+
+
+
+
+	
+	<!-- scripts list from theme config.yml -->
+	
+	<script src="/js/jquery-3.5.1.min.js"></script>
+	
+	<script src="/js/PreciousJoy.js"></script>
+	
+	<script src="/js/highlight.pack.js"></script>
+	
+	<script src="/js/jquery.fancybox.min.js"></script>
+	
+	<script src="/js/search.js"></script>
+	
+	<script src="/js/load.js"></script>
+	
+	
+
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
